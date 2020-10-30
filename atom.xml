@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://prayyueyu.github.io</id>
     <title>月雩の诗</title>
-    <updated>2020-10-30T03:58:49.020Z</updated>
+    <updated>2020-10-30T08:31:29.515Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://prayyueyu.github.io"/>
     <link rel="self" href="https://prayyueyu.github.io/atom.xml"/>
@@ -11,11 +11,31 @@
     <icon>https://prayyueyu.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 月雩の诗</rights>
     <entry>
+        <title type="html"><![CDATA[关于博客]]></title>
+        <id>https://prayyueyu.github.io/post/about/</id>
+        <link href="https://prayyueyu.github.io/post/about/">
+        </link>
+        <updated>2020-10-30T11:09:48.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="很高兴你能在茫茫人海中遇见你">很高兴你能在茫茫人海中遇见你</h1>
+<p>本博客与<a href="https://pray-yueyu.github.io/">月雩の小窝</a>为孪生博客</p>
+<p>博客上主要会放一些诗，更新时间不定</p>
+<p>另一个博客上的诗会在近期慢慢删掉(只是隐藏)</p>
+<p>最后感谢<a href="https://apa70.com/">Apa琦</a>的主题<a href="https://github.com/name-cq/gridea-theme-lin">凛</a>！</p>
+<p>注：</p>
+<pre><code>1.本博客所有篇目禁止任何人以任何形式进行转载，但作者允许除外
+
+2.图片来自网上，有侵权请联系删除！
+</code></pre>
+<h1 id="愿有缘人三羊开泰有情人终成眷属">愿，有缘人三羊开泰，有情人终成眷属！</h1>
+<figure data-type="image" tabindex="1"><img src="https://prayyueyu.github.io/post-images/about.jpg" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[乱亡引·天梦]]></title>
         <id>https://prayyueyu.github.io/post/luan-wang-yin-tian-meng/</id>
         <link href="https://prayyueyu.github.io/post/luan-wang-yin-tian-meng/">
         </link>
-        <updated>2020-10-30T01:04:59.000Z</updated>
+        <updated>2020-10-29T15:23:59.000Z</updated>
         <content type="html"><![CDATA[<p>&quot;引：</p>
 <p>余作诗三年，得诗百篇，已然近万字，乐矣。</p>
 <p>叹如今，学务繁重，盖数十日而一诗耳！</p>
@@ -32,21 +52,142 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[关于博客]]></title>
-        <id>https://prayyueyu.github.io/post/about/</id>
-        <link href="https://prayyueyu.github.io/post/about/">
+        <title type="html"><![CDATA[中秋吟]]></title>
+        <id>https://prayyueyu.github.io/post/zhong-qiu-yin/</id>
+        <link href="https://prayyueyu.github.io/post/zhong-qiu-yin/">
         </link>
-        <updated>2019-01-25T11:09:48.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="很高兴你能在茫茫人海中遇见你">很高兴你能在茫茫人海中遇见你</h1>
-<p>本博客与<a href="https://pray-yueyu.github.io/">月雩の小窝</a>为孪生博客</p>
-<p>博客上主要会放一些诗，更新时间不定</p>
-<p>注：</p>
-<pre><code>1.本博客所有篇目禁止任何人以任何形式进行转载，但作者允许除外
-
-2.图片来自网上，有侵权请联系删除！
-</code></pre>
-<h1 id="愿有缘人三羊开泰有情人终成眷属">愿，有缘人三羊开泰，有情人终成眷属！</h1>
-<figure data-type="image" tabindex="1"><img src="https://prayyueyu.github.io/post-images/about.jpg" alt="" loading="lazy"></figure>
+        <updated>2020-10-06T07:45:21.000Z</updated>
+        <content type="html"><![CDATA[<p>天依玄兔黯玉浮，仙子愁颦太阴孤。<br>
+金鹊今夕泣梦至，哪堪众生桂影疏！</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[引篇·目录]]></title>
+        <id>https://prayyueyu.github.io/post/yin-pian-mu-lu/</id>
+        <link href="https://prayyueyu.github.io/post/yin-pian-mu-lu/">
+        </link>
+        <updated>2020-08-27T07:53:36.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="柳向">柳向：</h1>
+<p>1.阴柳引<br>
+2.残柳引<br>
+3.苍柳引<br>
+4.醉柳引<br>
+5.星柳引</p>
+<h1 id="星向">星向：</h1>
+<p>1.盗星引<br>
+2.斗星引<br>
+3.碎星引<br>
+4.极星引<br>
+5.亡星引</p>
+<h1 id="亡向">亡向：</h1>
+<p>1.云亡引<br>
+2.赤亡引<br>
+3.乱亡引<br>
+4.哀亡引<br>
+5.天亡引</p>
+<h1 id="天向">天向：</h1>
+<p>1.沉天引<br>
+2.灵天引<br>
+3.隐天引<br>
+4.归天引<br>
+5.梦天引</p>
+<h1 id="梦向">梦向：</h1>
+<p>1.柳梦引<br>
+2.星梦引<br>
+3.亡梦引<br>
+4.天梦引<br>
+5.柳、星、亡&amp;天 梦</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[苍柳引]]></title>
+        <id>https://prayyueyu.github.io/post/cang-liu-yin/</id>
+        <link href="https://prayyueyu.github.io/post/cang-liu-yin/">
+        </link>
+        <updated>2020-06-28T15:00:33.000Z</updated>
+        <content type="html"><![CDATA[<p>半水苍苍，旧破其望。山枝厉泣，青天之上！</p>
+<p>日尽山河，月噬长江。淫雨连绵，小阁，谁知泪人湿衣！淡出于浮，千莲池，罔尽迷除。</p>
+<p>春风未曾到，白骨露于野。同为沦落人，醉花生亡魂。<br>
+当年白雪路，胡骑鸣长林。何处吹柳笛，散入满洛城。</p>
+<p>世事叹无常，携烛独微赏。断心无苍柳，入喉难解肠。<br>
+孤雁伴群星，野鸡正乱鸣。南向望秋水，无尽落长吟。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[还·潮连汐静]]></title>
+        <id>https://prayyueyu.github.io/post/huan-chao-lian-xi-jing/</id>
+        <link href="https://prayyueyu.github.io/post/huan-chao-lian-xi-jing/">
+        </link>
+        <updated>2020-06-16T14:10:13.000Z</updated>
+        <content type="html"><![CDATA[<p>潮连汐静处，半影携残烛。</p>
+<p>淡得闲沉月，春江黯花浮。</p>
+<p>东阁微起意，笑问青马途。</p>
+<p>惊雷破亡羽，轻鸿伴我俗。</p>
+<p>月斗山南北，风兮罔迷除。</p>
+<p>深林隐旧庄，静与星为夫。</p>
+<p>独坐亭阁前，乱声静入孤。</p>
+<p>幽火明清池，自诩万卷书。</p>
+<p>小楼摇风雨，取酒芳自酌。</p>
+<p>阴间满秋瑟，一叶舟行独。</p>
+<p>听君取柳行，悠然似夜鸣。</p>
+<p>又闻极星向，萧萧归何处？</p>
+<p><strong>星影落九天， 鱼雁舞千弦。</strong></p>
+<p><strong>但为君沉吟，孤鸿醉尘烟。</strong></p>
+<p>无言恨长酒，对燕空积愁。</p>
+<p>莫消万古情，月色难入喉。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[残柳引]]></title>
+        <id>https://prayyueyu.github.io/post/can-liu-yin/</id>
+        <link href="https://prayyueyu.github.io/post/can-liu-yin/">
+        </link>
+        <updated>2020-05-31T07:49:11.000Z</updated>
+        <content type="html"><![CDATA[<p>柳之毵毵，千丝尽残。</p>
+<p>身碎星裂，惠风酒旗，岭然间，忘却昨日作山巅。独与孤楼，伴常风，望烽火，千军万马，悬木一人，赤目长啸随龙吟！</p>
+<p>古时有鸟道，化为顽戏社。长河落白日，大江吞长虹。浮花弄月影，醉酒与仙琼。</p>
+<p>欲报倾城意，携剑指苍穹。漫漫无欲意，夜空山林，寂兮，无言，风雨摇荒地，天雷惊飞湍，不知，终为尘缘。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[阴柳引]]></title>
+        <id>https://prayyueyu.github.io/post/yin-liu-yin/</id>
+        <link href="https://prayyueyu.github.io/post/yin-liu-yin/">
+        </link>
+        <updated>2020-05-30T15:50:09.000Z</updated>
+        <content type="html"><![CDATA[<p>柳行周身，绕梦作魂！</p>
+<p>风衣惊雨裳万里。阴柳间，黯然回首，漫卷归客愁心肠，三两而行，五行而顾。怎谁知，忘却今生，点滴行柳黄昏！</p>
+<p>六七星，八九重影，迷崖微动泪衣。长剑起，千里寂。浊酒一杯，切闻山歌伴呕哑，尚醉阴间，仰面席连，不见曦月，唯见长夜苦愁情。</p>
+<p>烛火明，夜短兮，且与池共赏：良辰美景，烟火兼柳行。更作山摧之歌，遗与远思。</p>
+<p>月雩为诗，诗才郎尽。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[黄昏所见]]></title>
+        <id>https://prayyueyu.github.io/post/huang-hun-suo-jian/</id>
+        <link href="https://prayyueyu.github.io/post/huang-hun-suo-jian/">
+        </link>
+        <updated>2019-07-03T07:57:27.000Z</updated>
+        <content type="html"><![CDATA[<p>（一）</p>
+<p>夕阳接山赤光影，天暗合一孤雁飞。</p>
+<p>连绵微透朦胧色，落尽人间梦肠摧。</p>
+<p>（二）</p>
+<p>斜山对天破云霄，轻空飘渺血满朝。</p>
+<p>百树争开孤村卧，天净烟远黑云缭。</p>
+<p>（三）</p>
+<p>满雾隐峰不知处，一塔孤立对苍天。</p>
+<p>微红脊上时浑暗，愁绪如丝破欲旋。</p>
+<p>//2019.7.1~2019.7.3</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[第一首诗·思尝]]></title>
+        <id>https://prayyueyu.github.io/post/di-yi-shou-shi-si-chang/</id>
+        <link href="https://prayyueyu.github.io/post/di-yi-shou-shi-si-chang/">
+        </link>
+        <updated>2017-10-11T07:58:49.000Z</updated>
+        <content type="html"><![CDATA[<p>往事已去却芬芳，思尝只悲无法回。</p>
+<p>杨花拂面菊花香，风华正茂却沧桑。</p>
 ]]></content>
     </entry>
 </feed>
