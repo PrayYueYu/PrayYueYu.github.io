@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://prayyueyu.github.io</id>
     <title>月雩の诗</title>
-    <updated>2020-10-30T16:22:42.213Z</updated>
+    <updated>2020-10-30T16:43:43.121Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://prayyueyu.github.io"/>
     <link rel="self" href="https://prayyueyu.github.io/atom.xml"/>
@@ -69,15 +69,31 @@
         </link>
         <updated>2020-08-27T07:53:36.000Z</updated>
         <content type="html"><![CDATA[<h1 id="柳向">柳向：</h1>
-<p><a href="https://prayyueyu.github.io/post/yin-liu-yin/">阴柳引</a>→<a href="https://prayyueyu.github.io/post/can-liu-yin/">残柳引</a>→<a href="https://prayyueyu.github.io/post/cang-liu-yin/">苍柳引</a>→醉柳引·故人安在兮→星柳引·天亡影</p>
+<p><strong>篇首·醉花引</strong></p>
+<p><a href="https://prayyueyu.github.io/post/yin-liu-yin/">阴柳引</a>→<a href="https://prayyueyu.github.io/post/can-liu-yin/">残柳引</a>→<a href="https://prayyueyu.github.io/post/cang-liu-yin/">苍柳引</a>→<a href="https://prayyueyu.github.io/post/zui-liu-yin-gu-ren-an-zai-xi">醉柳引·故人安在兮</a>→星柳引·天亡影</p>
 <h1 id="星向">星向：</h1>
+<p><strong>篇首·葬灵引</strong></p>
 <p>盗星引→斗星引→碎星引→极星引→亡星引</p>
 <h1 id="亡向">亡向：</h1>
+<p><strong>篇首·虚弥二篇</strong></p>
 <p>云亡引·世桑→赤亡引·天命→<a href="https://prayyueyu.github.io/post/luan-wang-yin-tian-meng/">乱亡引·天梦</a>→哀亡引→天亡引</p>
 <h1 id="天向">天向：</h1>
 <p>沉天引→灵天引→隐天引→归天引→梦天引</p>
 <h1 id="梦向">梦向：</h1>
 <p>柳梦引→星梦引→亡梦引→天梦引→柳&amp;星&amp;亡&amp;天·梦</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[醉柳引·故人安在兮]]></title>
+        <id>https://prayyueyu.github.io/post/zui-liu-yin-gu-ren-an-zai-xi/</id>
+        <link href="https://prayyueyu.github.io/post/zui-liu-yin-gu-ren-an-zai-xi/">
+        </link>
+        <updated>2020-07-09T15:10:58.000Z</updated>
+        <content type="html"><![CDATA[<p>醉柳其阴，孤赏芳晖。笑问凄者，岂无影随？</p>
+<p>念当年豪姿，手持双刃，披长袍，左右双雄，共掌江湖。忆昔时美景，杯酒独吟，满天樱辉，沉玉跃金，携子之手，步于长亭。</p>
+<p>雪雁带泥爪，故人安在兮。梦时未曾留，惊醒泪自泣。画中人无迹，惟遗满清香。叹然醉柳阴，世事断人肠。</p>
+<p>云疾天高远，日行山长青。古道独登楼，征人尽望乡。长鸿送白日，旧子别故乡。千年白发断，万里愁凝霜。</p>
+<p>雁子南飞时，故人忆往事。</p>
 ]]></content>
     </entry>
     <entry>
@@ -159,16 +175,6 @@
 <p>满雾隐峰不知处，一塔孤立对苍天。</p>
 <p>微红脊上时浑暗，愁绪如丝破欲旋。</p>
 <p>//2019.7.1~2019.7.3</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[第一首诗·思尝]]></title>
-        <id>https://prayyueyu.github.io/post/di-yi-shou-shi-si-chang/</id>
-        <link href="https://prayyueyu.github.io/post/di-yi-shou-shi-si-chang/">
-        </link>
-        <updated>2017-10-11T07:58:49.000Z</updated>
-        <content type="html"><![CDATA[<p>往事已去却芬芳，思尝只悲无法回。</p>
-<p>杨花拂面菊花香，风华正茂却沧桑。</p>
 ]]></content>
     </entry>
 </feed>
