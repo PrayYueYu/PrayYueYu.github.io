@@ -1,5 +1,6 @@
 body {
   background: #edeff0 url(../media/img/bg_01.jpg);
+  cursor: url(../media/img/mouse.cur);
 }
 a {
   text-decoration: none;
