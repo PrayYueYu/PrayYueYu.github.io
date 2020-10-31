@@ -9,14 +9,14 @@
 <meta name="description" content="月雩梦，薇嫮影 (除非作者允许，禁止转载)">
 <meta name="theme-color" content="#495057">
 <title>黄昏所见 | 月雩の诗</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1604139945890">
+<link rel="shortcut icon" href="/favicon.ico?v=1604146483973">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
   href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
   rel="stylesheet" type="text/css">
 
-<link href="/media/hljs/styles/default.css"
+<link href="/media/hljs/styles/dracula.css"
   rel="stylesheet">
 
 <link rel="stylesheet" href="/styles/main.css">
@@ -152,9 +152,9 @@
           
             
               <li class="nav-item ">
-                <a href="/friends/" target="_self">
+                <a href="/friends/" target="_blank">
                   
-                    <i class="fa fa-address-book"></i> 友情链接
+                    <i class="fa fa-address-book"></i> 友人帐
                   
                 </a>
               </li>
@@ -224,10 +224,7 @@
     
     <div class="site-description right-motion">
       
-      
-      
-        <p>学生，诗人，蒟蒻Oier</p>
-      
+        <p id="binft">学生，诗人，蒟蒻Oier</p>
       
     </div>
     
@@ -255,10 +252,39 @@
   </div>
   
     
+      <div class="sidebar-item">
+        <span class="site-item-rss">
+            <i class="fa fa-rss"></i>
+            <a href="https://prayyueyu.github.io/atom.xml" target="_blank">RSS</a>
+        </span>
+      </div>
+    
   
+  
+    <div class="sidebar-item sidebar-item-social">
+      <div class="social-item">
+        
+          
+            <a href="https://github.com/PrayYueYu">
+              <i class="fa fa-github-alt" title="github"></i>
+            </a>
+          
+            <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1944215344&amp;site=qq&amp;menu=yes">
+              <i class="fa fa-qq" title="QQ"></i>
+            </a>
+          
+        
+        
+      </div>
+    </div>
   
 
 
+
+  <div style="width: 100%; position: relative;">
+    <canvas id="canvasDiyBlock" style="width:100%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+    <script src="/media/js/magic/clock.js"></script>
+  </div>
 
 </div>
           
@@ -448,7 +474,54 @@
 </div>
             
             
-  
+  <script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<div id="vcomments" style="padding: 10px 0px 0px 0px"></div>
+
+<style>
+  .v .veditor {
+    min-height: 10rem;
+    background-image: url('');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: rgba(255, 255, 255, 0);
+    resize: none;
+  }
+
+  .v .vwrap {
+    border: 1px solid #000 !important;
+  }
+
+  .v .vbtn {
+    padding: .4rem 1.2rem !important;
+    border-color: #fff !important;
+    background-color: #49b1f5 !important;
+    color: #fff !important;
+    font-size: .7rem !important;
+  }
+
+  .v .vcards .vcard .vh .vmeta .vat {
+    padding: 0 .8rem !important;
+    border: 1px solid #00c4b6 !important;
+    border-radius: 5px !important;
+    color: #00c4b6 !important;
+  }
+</style>
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: 'oobxtvwKpLlPKsrVBN8O8M8K-gzGzoHsz',
+    appKey: 'hyurc1H4jkOsOc646jmU3Lcp',
+    avatar: 'retro',
+    placeholder: '',
+    pageSize: '',
+    lang: 'zh-cn',
+    enableQQ: 'true' === 'false',
+    visitor: 'true' === 'false',
+    highlight: 'true' === 'true',
+    avatarForce: 'true' === 'false',
+  });
+</script>
 
           </div>
         </div>
@@ -474,6 +547,13 @@
     </span>
     
   </div>
+  
+  
+  
+  <div class="bg-img">
+    <img src="\media\images\custom-bgImg.jpg" />
+  </div>
+  
   
   
   
@@ -605,7 +685,7 @@
   }
 
   // 链接跳转
-  let newWindow = 'false'
+  let newWindow = 'true'
   if (newWindow === 'true') {
     let links = document.querySelectorAll('.post-body a')
     links.forEach(item => {
@@ -624,7 +704,7 @@
   hljs.initHighlightingOnLoad();
   
   // 离开当前页title变化
-  var leaveTitle = "";
+  var leaveTitle = "星影落九天，鱼雁舞千弦";
   if (leaveTitle) {
     document.addEventListener('visibilitychange', function () {
       if (document.visibilityState == 'hidden') {
@@ -1370,7 +1450,15 @@
 </script>
 
 
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+<script type="text/javascript" src="/media/js/mouse/fireworks.js"></script>
 
 
+<script src="/media/js/cool.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/gh/lete114/CDN/Sum/sakura.js"></script>
 
 </html>

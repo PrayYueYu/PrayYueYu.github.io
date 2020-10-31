@@ -2051,7 +2051,9 @@ p > code {
     margin-bottom: 10px;
   }
 }
-body {
+.bg-color .bg-color {
+      background: transparent !important;
+    }body {
       background-color: #fff5f5;
     }.header {
         width: 960px;
@@ -2072,7 +2074,7 @@ body {
       border-bottom-color: #555;
     }
     .archive-timeline-box::after, .tag-timeline-wrapper::after {
-      background: #c0eb75fe;
+      background: #c0eb75b2;
     }h1, h2, h3, h4, h5, h6 {
       color: #555;
     }
@@ -2119,11 +2121,11 @@ body {
       }.nav-item a:hover {
         color: #91a7ff;
       }.nav-item-active {
-      background: #ffec99fe;
+      background: #ffec99b2;
     }
 
     .nav-item:hover {
-      background: #ffec99fe;
+      background: #ffec99b2;
       color: rgba(0, 0, 0, 0.98);
     }.site-author-image {
       border-radius: 50%;
@@ -2135,31 +2137,37 @@ body {
       transition-duration: 59s;
       transition-timing-function: cubic-bezier(.34,0,.84,1);
     }.markdownIt-TOC a {
-      color: #eee;
-      border-bottom-color: #eee;
+      color: #f03e3e;
+      border-bottom-color: #f03e3e;
     }.markdownIt-TOC a:hover {
-      color: #fff;
-      border-bottom-color: #fff;
+      color: #ffec99;
+      border-bottom-color: #ffec99;
     }.active-current > a {
-      color: #fc6423 !important;
-      border-bottom-color: #fc6423 !important;
+      color: #ffa94d !important;
+      border-bottom-color: #ffa94d !important;
     }
     .sidebar-title-active {
-      color: #fc6423 !important;
-      border-bottom-color: #fc6423 !important;
+      color: #ffa94d;
+      border-bottom-color: #ffa94d;
     }
     .sidebar-title-item:hover {
-      color: #fc6423 !important;
+      color: #ffa94d !important;
     }
     .active-show > a {
-      color: #fc6423;
-      border-bottom-color: #fc6423;
+      color: #ffa94d;
+      border-bottom-color: #ffa94d;
     }
     .active-hidden > a {
-      color: #fc6423;
-      border-bottom-color: #fc6423;
+      color: #ffa94d;
+      border-bottom-color: #ffa94d;
     }.bg-color {
-      background-color: #ced4dafe;
+      background-color: #f1f3f5b2;
+    }
+    .gemini .blog-header, .gemini .sidebar-wrapper, .gemini .article-wrapper, .gemini .post, .gemini .page, .gemini .section, .gemini .section-box, .gemini .sidebar-box, .gemini .friends-section {
+      border-radius: 18px;
+    }
+    .pisces .blog-header, .pisces .sidebar-wrapper, .pisces .article-wrapper, .pisces .section, .pisces .sidebar-box, .pisces .friends-section {
+      border-radius: 18px;
     }
     .site-meta {
       background: #495057 !important;
@@ -2168,25 +2176,29 @@ body {
       background: #495057;
     }
     .brand {
-      background: #495057fe;
+      background: #495057b2;
     }
     .main-title, .brand {
       color: #63e6be !important;
     }
     .mist .site-title i {
-      background: #63e6befe;
+      background: #63e6beb2;
+    }.bg-img img {
+        filter: blur(1.5px)
+      }.box-shadow-wrapper {
+      padding: 10px;
     }.box-shadow-wrapper {
       box-shadow: none !important;
     }body {
-      cursor: default;
+      cursor: url('/media/curs/https://prayyueyu.github.io/media/curs/default_link.cur.cur'), default;
     }a {
-      cursor: pointer;
+      cursor: url('/media/curs/https://prayyueyu.github.io/media/curs/default_link.cur.cur'), pointer !important;
     }input, textarea, code {
-      cursor: text;
+      cursor: url('/media/curs/https://prayyueyu.github.io/media/curs/default_link.cur.cur'), text !important;
     }code > span.copy-code {
-      cursor: pointer;
+      cursor: url('/media/curs/https://prayyueyu.github.io/media/curs/default_link.cur.cur'), text !important;
     }.post img {
-      cursor: zoom-in;
+      cursor: url('/media/curs/https://prayyueyu.github.io/media/curs/default_link.cur.cur'), zoom-in !important;
     }.post img {
-      cursor: zoom-out;
+      cursor: url('/media/curs/https://prayyueyu.github.io/media/curs/default_link.cur.cur'), zoom-out !important;
     }
