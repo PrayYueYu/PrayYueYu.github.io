@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://prayyueyu.github.io</id>
     <title>月雩の诗</title>
-    <updated>2020-10-31T15:49:42.028Z</updated>
+    <updated>2020-10-31T16:56:22.527Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://prayyueyu.github.io"/>
     <link rel="self" href="https://prayyueyu.github.io/atom.xml"/>
@@ -21,7 +21,7 @@
 <p>博客上主要会放一些诗，更新时间不定</p>
 <p><strong>博客发布的时间即为每首诗的创作完成时间，误差时间<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⩽</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">\leqslant 0.5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7733399999999999em;vertical-align:-0.13667em;"></span><span class="mrel amsrm">⩽</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">5</span></span></span></span>天</strong></p>
 <p>另一个博客上的诗会在近期慢慢删掉(只是隐藏)</p>
-<p>感谢<a href="https://apa70.com/">Apa琦</a>的主题<a href="https://github.com/name-cq/gridea-theme-lin">凛</a>！</p>
+<p>感谢<a href="https://yeming.site/">Madara</a>的主题<a href="https://github.com/hsxyhao/gridea-theme-next">NexT</a>！</p>
 <p>有什么问题欢迎留言呀！</p>
 <p>注：</p>
 <pre><code>1.本博客所有篇目禁止任何人以任何形式进行转载，但作者允许除外
@@ -102,7 +102,7 @@
         <updated>2020-08-27T07:53:36.000Z</updated>
         <content type="html"><![CDATA[<h1 id="柳向">柳向：</h1>
 <p><strong>篇首·醉花引</strong></p>
-<p><a href="https://prayyueyu.github.io/post/yin-liu-yin/">阴柳引</a>→<a href="https://prayyueyu.github.io/post/can-liu-yin/">残柳引</a>→<a href="https://prayyueyu.github.io/post/cang-liu-yin/">苍柳引</a>→<a href="https://prayyueyu.github.io/post/zui-liu-yin-gu-ren-an-zai-xi">醉柳引·故人安在兮</a>→星柳引·天亡影</p>
+<p><a href="https://prayyueyu.github.io/post/yin-liu-yin/">阴柳引</a>→<a href="https://prayyueyu.github.io/post/can-liu-yin/">残柳引</a>→<a href="https://prayyueyu.github.io/post/cang-liu-yin/">苍柳引</a>→<a href="https://prayyueyu.github.io/post/zui-liu-yin-gu-ren-an-zai-xi">醉柳引·故人安在兮</a>→<a href="https://prayyueyu.github.io/post/xing-liu-yin-tian-wang-ying/">星柳引·天亡影</a></p>
 <h1 id="星向">星向：</h1>
 <p><strong>篇首·葬灵引</strong></p>
 <p>盗星引→斗星引→碎星引→极星引→亡星引</p>
