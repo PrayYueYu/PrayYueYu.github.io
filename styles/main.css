@@ -2052,7 +2052,7 @@ p > code {
   }
 }
 body {
-      background-color: #f8f9fa;
+      background-color: #fff5f5;
     }.header {
         width: 960px;
         margin: 0 auto;
@@ -2119,11 +2119,11 @@ body {
       }.nav-item a:hover {
         color: #495057;
       }.nav-item-active {
-      background: #dee2e6fe;
+      background: #ffec99fe;
     }
 
     .nav-item:hover {
-      background: #dee2e6fe;
+      background: #ffec99fe;
       color: rgba(0, 0, 0, 0.98);
     }.site-author-image {
       border-radius: 50%;
@@ -2159,7 +2159,7 @@ body {
       color: #fc6423;
       border-bottom-color: #fc6423;
     }.bg-color {
-      background-color: #f1f3f5fe;
+      background-color: #ced4dafe;
     }
     .site-meta {
       background: #343a40 !important;
