@@ -2072,52 +2072,52 @@ body {
       border-bottom-color: #555;
     }
     .archive-timeline-box::after, .tag-timeline-wrapper::after {
-      background: #a9e34bfe;
+      background: #c0eb75fe;
     }h1, h2, h3, h4, h5, h6 {
-      color: #495057;
+      color: #555;
     }
     
     .archive-timeline-title::before {
-      background-color: #495057;
+      background-color: #555;
     }
     
     .post-title-link::before {
-      background-color: #495057;
+      background-color: #555;
     }
     
     .node-title::before {
-      background-color: #495057;
+      background-color: #555;
     }a {
-      color: #f08c00;
+      color: #e67700;
     }
     
     .next-md-body a, .friends-box a  {
-      color: #f08c00;
-      border-bottom: 1px solid #f08c00;
+      color: #e67700;
+      border-bottom: 1px solid #e67700;
     }a:hover {
-      color: #fa5252;
+      color: #d9480f;
     }
     
     .archive-timeline-box .tag-node:hover::before {
-      background-color: #fa5252;
+      background-color: #d9480f;
     }
     
     .markdownIt-TOC a:hover {
-      color: #fa5252;
-      border-bottom-color: #fa5252;
+      color: #d9480f;
+      border-bottom-color: #d9480f;
     }
 
     .next-md-body a:hover, .friends-box a:hover {
-      color: #fa5252;
-      border-bottom-color: #fa5252;
+      color: #d9480f;
+      border-bottom-color: #d9480f;
     }
     .nav-toggle .line {
       background-color:  !important;
     }
       .nav-item a {
-        color:  #343a40;
+        color:  #555;
       }.nav-item a:hover {
-        color: #495057;
+        color: #91a7ff;
       }.nav-item-active {
       background: #ffec99fe;
     }
@@ -2162,23 +2162,23 @@ body {
       background-color: #ced4dafe;
     }
     .site-meta {
-      background: #343a40 !important;
+      background: #495057 !important;
     }
     .head-top-line {
-      background: #343a40;
+      background: #495057;
     }
     .brand {
-      background: #343a40fe;
+      background: #495057fe;
     }
     .main-title, .brand {
-      color: #66a80f !important;
+      color: #63e6be !important;
     }
     .mist .site-title i {
-      background: #66a80ffe;
+      background: #63e6befe;
     }.box-shadow-wrapper {
       box-shadow: none !important;
     }body {
-      cursor: url('/media/curs/E:\Gridea Blogs\诗Blog\Gridea-月雩の诗\themes\gridea-theme-next-master\assets\media\curs\default_link.cur.cur'), default;
+      cursor: default;
     }a {
       cursor: pointer;
     }input, textarea, code {
