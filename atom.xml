@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://prayyueyu.github.io</id>
     <title>月雩の诗</title>
-    <updated>2020-10-31T15:25:49.339Z</updated>
+    <updated>2020-10-31T15:49:42.028Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://prayyueyu.github.io"/>
     <link rel="self" href="https://prayyueyu.github.io/atom.xml"/>
@@ -29,7 +29,6 @@
 2.图片来自网上，有侵权请联系删除！
 </code></pre>
 <h1 id="愿有缘人三羊开泰有情人终成眷属">愿，有缘人三羊开泰，有情人终成眷属！</h1>
-<figure data-type="image" tabindex="1"><img src="https://prayyueyu.github.io/post-images/about.jpg" alt="" loading="lazy"></figure>
 ]]></content>
     </entry>
     <entry>
@@ -119,6 +118,21 @@
 ]]></content>
     </entry>
     <entry>
+        <title type="html"><![CDATA[星柳引·天亡影]]></title>
+        <id>https://prayyueyu.github.io/post/xing-liu-yin-tian-wang-ying/</id>
+        <link href="https://prayyueyu.github.io/post/xing-liu-yin-tian-wang-ying/">
+        </link>
+        <updated>2020-07-12T12:41:08.000Z</updated>
+        <content type="html"><![CDATA[<p>柳丝既尽，星影初现。百枝凤鸣，待之万年。</p>
+<p>星柳。垂年古木，仰面长星。柳桥通天河，欲为命人引。千山隐晖，苍原雅洞，终以寻真仙。<br>
+纵得吟九霄，横遍落长袍。两星混虚出，震惶伴天朝。</p>
+<p>天亡。萧萧微南洲，伴酒独轻舟。我影舞三清，月倚泪山壁。夕沉惊飞鸟，万星繁夜明。<br>
+初龙腾渊，啸击万谷；雏凤展翅，烈火焚天。</p>
+<p>两星若有相逢时，无言，湿白袖。</p>
+<p>备注：创作时间为<strong>中考期间</strong></p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[醉柳引·故人安在兮]]></title>
         <id>https://prayyueyu.github.io/post/zui-liu-yin-gu-ren-an-zai-xi/</id>
         <link href="https://prayyueyu.github.io/post/zui-liu-yin-gu-ren-an-zai-xi/">
@@ -167,18 +181,6 @@
 <p><strong>但为君沉吟，孤鸿醉尘烟。</strong></p>
 <p>无言恨长酒，对燕空积愁。</p>
 <p>莫消万古情，月色难入喉。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[残柳引]]></title>
-        <id>https://prayyueyu.github.io/post/can-liu-yin/</id>
-        <link href="https://prayyueyu.github.io/post/can-liu-yin/">
-        </link>
-        <updated>2020-05-31T07:49:11.000Z</updated>
-        <content type="html"><![CDATA[<p>柳之毵毵，千丝尽残。</p>
-<p>身碎星裂，惠风酒旗，岭然间，忘却昨日作山巅。独与孤楼，伴常风，望烽火，千军万马，悬木一人，赤目长啸随龙吟！</p>
-<p>古时有鸟道，化为顽戏社。长河落白日，大江吞长虹。浮花弄月影，醉酒与仙琼。</p>
-<p>欲报倾城意，携剑指苍穹。漫漫无欲意，夜空山林，寂兮，无言，风雨摇荒地，天雷惊飞湍，不知，终为尘缘。</p>
 ]]></content>
     </entry>
 </feed>
