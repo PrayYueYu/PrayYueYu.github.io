@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://prayyueyu.github.io</id>
     <title>月雩の诗</title>
-    <updated>2020-10-31T17:23:46.383Z</updated>
+    <updated>2020-11-01T03:25:05.201Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://prayyueyu.github.io"/>
     <link rel="self" href="https://prayyueyu.github.io/atom.xml"/>
@@ -95,6 +95,16 @@
 ]]></content>
     </entry>
     <entry>
+        <title type="html"><![CDATA[半生歌]]></title>
+        <id>https://prayyueyu.github.io/post/ban-sheng-ge/</id>
+        <link href="https://prayyueyu.github.io/post/ban-sheng-ge/">
+        </link>
+        <updated>2020-09-12T03:14:21.000Z</updated>
+        <content type="html"><![CDATA[<p>半生愁肠断，半生人未还。</p>
+<p>若问归何处，半生空吟弹。</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[引篇·目录]]></title>
         <id>https://prayyueyu.github.io/post/yin-pian-mu-lu/</id>
         <link href="https://prayyueyu.github.io/post/yin-pian-mu-lu/">
@@ -115,6 +125,19 @@
 <p>柳梦引→星梦引→亡梦引→天梦引→柳&amp;星&amp;亡&amp;天·梦</p>
 <p><strong>提示：点击标题即可查看！(只有发表了的才能查看哦)</strong></p>
 <p>引篇的主要的体裁类似于<strong>乐府诗</strong>，但是我总感觉不像<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>q</mi><mi>a</mi><mi>q</mi></mrow><annotation encoding="application/x-tex">qaq</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">q</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">q</span></span></span></span></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[深夜の涙]]></title>
+        <id>https://prayyueyu.github.io/post/shen-ye-nolei/</id>
+        <link href="https://prayyueyu.github.io/post/shen-ye-nolei/">
+        </link>
+        <updated>2020-07-31T15:24:22.000Z</updated>
+        <content type="html"><![CDATA[<p>一曲酒中歌，半夜泪人魔。</p>
+<p>杨花尽，风飘絮，半轮金月随波起。<br>
+子规啼，梦依稀，满枕清流未曾息。</p>
+<p>一剑踏青云，与舞共朝夕。醉魂逐轻影，飞雁孤楼离。</p>
+<p>三年如一日，与君挥梦迹。不辞此生乐，得君满天吉！</p>
 ]]></content>
     </entry>
     <entry>
@@ -143,44 +166,6 @@
 <p>雪雁带泥爪，故人安在兮。梦时未曾留，惊醒泪自泣。画中人无迹，惟遗满清香。叹然醉柳阴，世事断人肠。</p>
 <p>云疾天高远，日行山长青。古道独登楼，征人尽望乡。长鸿送白日，旧子别故乡。千年白发断，万里愁凝霜。</p>
 <p>雁子南飞时，故人忆往事。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[苍柳引]]></title>
-        <id>https://prayyueyu.github.io/post/cang-liu-yin/</id>
-        <link href="https://prayyueyu.github.io/post/cang-liu-yin/">
-        </link>
-        <updated>2020-06-28T15:00:33.000Z</updated>
-        <content type="html"><![CDATA[<p>半水苍苍，旧破其望。山枝厉泣，青天之上！</p>
-<p>日尽山河，月噬长江。淫雨连绵，小阁，谁知泪人湿衣！淡出于浮，千莲池，罔尽迷除。</p>
-<p>春风未曾到，白骨露于野。同为沦落人，醉花生亡魂。<br>
-当年白雪路，胡骑鸣长林。何处吹柳笛，散入满洛城。</p>
-<p>世事叹无常，携烛独微赏。断心无苍柳，入喉难解肠。<br>
-孤雁伴群星，野鸡正乱鸣。南向望秋水，无尽落长吟。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[还·潮连汐静]]></title>
-        <id>https://prayyueyu.github.io/post/huan-chao-lian-xi-jing/</id>
-        <link href="https://prayyueyu.github.io/post/huan-chao-lian-xi-jing/">
-        </link>
-        <updated>2020-06-16T14:10:13.000Z</updated>
-        <content type="html"><![CDATA[<p>潮连汐静处，半影携残烛。</p>
-<p>淡得闲沉月，春江黯花浮。</p>
-<p>东阁微起意，笑问青马途。</p>
-<p>惊雷破亡羽，轻鸿伴我俗。</p>
-<p>月斗山南北，风兮罔迷除。</p>
-<p>深林隐旧庄，静与星为夫。</p>
-<p>独坐亭阁前，乱声静入孤。</p>
-<p>幽火明清池，自诩万卷书。</p>
-<p>小楼摇风雨，取酒芳自酌。</p>
-<p>阴间满秋瑟，一叶舟行独。</p>
-<p>听君取柳行，悠然似夜鸣。</p>
-<p>又闻极星向，萧萧归何处？</p>
-<p><strong>星影落九天， 鱼雁舞千弦。</strong></p>
-<p><strong>但为君沉吟，孤鸿醉尘烟。</strong></p>
-<p>无言恨长酒，对燕空积愁。</p>
-<p>莫消万古情，月色难入喉。</p>
 ]]></content>
     </entry>
 </feed>
