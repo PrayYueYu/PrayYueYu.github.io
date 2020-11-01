@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://prayyueyu.github.io</id>
     <title>月雩の诗</title>
-    <updated>2020-11-01T04:12:53.610Z</updated>
+    <updated>2020-11-01T16:37:22.888Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://prayyueyu.github.io"/>
     <link rel="self" href="https://prayyueyu.github.io/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://prayyueyu.github.io/images/avatar.png</logo>
     <icon>https://prayyueyu.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 月雩の诗</rights>
+    <entry>
+        <title type="html"><![CDATA[咏奉节]]></title>
+        <id>https://prayyueyu.github.io/post/yong-feng-jie/</id>
+        <link href="https://prayyueyu.github.io/post/yong-feng-jie/">
+        </link>
+        <updated>2020-11-01T16:34:54.000Z</updated>
+        <content type="html"><![CDATA[<p>白帝腾龙破九霄，天坠沉崖烟飘渺。</p>
+<p>江波纵横南北坼，仙湖霖散渔人劳。</p>
+<p>注：比赛诗词</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[关于博客]]></title>
         <id>https://prayyueyu.github.io/post/about/</id>
@@ -156,19 +167,6 @@
 初龙腾渊，啸击万谷；雏凤展翅，烈火焚天。</p>
 <p>两星若有相逢时，无言，湿白袖。</p>
 <p>备注：创作时间为<strong>中考期间</strong></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[醉柳引·故人安在兮]]></title>
-        <id>https://prayyueyu.github.io/post/zui-liu-yin-gu-ren-an-zai-xi/</id>
-        <link href="https://prayyueyu.github.io/post/zui-liu-yin-gu-ren-an-zai-xi/">
-        </link>
-        <updated>2020-07-09T15:10:58.000Z</updated>
-        <content type="html"><![CDATA[<p>醉柳其阴，孤赏芳晖。笑问凄者，岂无影随？</p>
-<p>念当年豪姿，手持双刃，披长袍，左右双雄，共掌江湖。忆昔时美景，杯酒独吟，满天樱辉，沉玉跃金，携子之手，步于长亭。</p>
-<p>雪雁带泥爪，故人安在兮。梦时未曾留，惊醒泪自泣。画中人无迹，惟遗满清香。叹然醉柳阴，世事断人肠。</p>
-<p>云疾天高远，日行山长青。古道独登楼，征人尽望乡。长鸿送白日，旧子别故乡。千年白发断，万里愁凝霜。</p>
-<p>雁子南飞时，故人忆往事。</p>
 ]]></content>
     </entry>
 </feed>
