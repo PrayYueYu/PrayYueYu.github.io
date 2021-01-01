@@ -2,14 +2,48 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://prayyueyu.github.io</id>
     <title>月雩の诗</title>
-    <updated>2020-11-03T15:54:17.430Z</updated>
+    <updated>2021-01-01T02:51:47.319Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://prayyueyu.github.io"/>
     <link rel="self" href="https://prayyueyu.github.io/atom.xml"/>
-    <subtitle>月雩梦，薇嫮影 (除非作者允许，禁止转载)</subtitle>
+    <subtitle>世间如此广大，应有我一席。 (除非作者允许，禁止转载)</subtitle>
     <logo>https://prayyueyu.github.io/images/avatar.png</logo>
     <icon>https://prayyueyu.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 月雩の诗</rights>
+    <rights>All rights reserved 2021, 月雩の诗</rights>
+    <entry>
+        <title type="html"><![CDATA[神纪·人]]></title>
+        <id>https://prayyueyu.github.io/post/shen-ji-ren/</id>
+        <link href="https://prayyueyu.github.io/post/shen-ji-ren/">
+        </link>
+        <updated>2020-12-31T02:31:26.000Z</updated>
+        <content type="html"><![CDATA[<p>千古亡魂，幽冥相轮。<br>
+破沉惊天羽，燕寄月归人。<br>
+谁道柳兮风随，岂无念卿之影！<br>
+三两桃酒满秋色，一语泣至何曾闻！</p>
+<p>万里纪神，天瑞齐降。<br>
+残枝去苦岁，乐与梦泪长。<br>
+无问夕沉水溅，不为愁颦之恨。<br>
+七八星河半春绝，百转龙吟正气荡！</p>
+<p><strong>2020再见，2021你好！</strong><br>
+<strong>注：2021元旦致辞</strong></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[哀亡引·辞]]></title>
+        <id>https://prayyueyu.github.io/post/ai-wang-yin-ci/</id>
+        <link href="https://prayyueyu.github.io/post/ai-wang-yin-ci/">
+        </link>
+        <updated>2020-11-13T02:38:44.000Z</updated>
+        <content type="html"><![CDATA[<p>青彩流阁，神龙自降。冥见三阳，幽烛微光。</p>
+<p>·别留<strong>辞</strong>，一曲扰人心。三千年浮道，未曾有之。当择是日，满面涕流，对天长啸。<br>
+方尽，缘止。天赐也，却道长夜恨无星，离亦痛，留亦痛。复得凋零。</p>
+<p>·与姻<strong>辞</strong>，幕后人断肠。红帘一席幽满色，天地浓喜共欢饮。<br>
+轻唇微启，月柔玉衣。愁心如鬼，涰声似鸣。莫问：神之未有也。</p>
+<p>·红尘<strong>辞</strong>，百里清梦流！三阳冥幽，双魂而立。丝轻落，月光隐，<br>
+碧波未云。夜烛短，亦成仙。逍遥唯我，天地独尊。</p>
+<p>·来世<strong>迎</strong>，自修《衰梦影》。不负卿，今夕，何年？</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[咏奉节]]></title>
         <id>https://prayyueyu.github.io/post/yong-feng-jie/</id>
@@ -129,44 +163,16 @@
 <p><a href="https://prayyueyu.github.io/post/yin-liu-yin/">阴柳引</a>→<a href="https://prayyueyu.github.io/post/can-liu-yin/">残柳引</a>→<a href="https://prayyueyu.github.io/post/cang-liu-yin/">苍柳引</a>→<a href="https://prayyueyu.github.io/post/zui-liu-yin-gu-ren-an-zai-xi">醉柳引·故人安在兮</a>→<a href="https://prayyueyu.github.io/post/xing-liu-yin-tian-wang-ying/">星柳引·天亡影</a></p>
 <h1 id="星向">星向：</h1>
 <p><strong>篇首·引·葬灵引</strong></p>
-<p>劫·盗星引→辞·斗星引→罔·碎星引→苍·极星引→终·亡星引</p>
+<p><a href="https://prayyueyu.github.io/post/jie-dao-xing-yin/">劫·盗星引</a>→辞·斗星引→罔·碎星引→苍·极星引→终·亡星引</p>
 <h1 id="亡向">亡向：</h1>
 <p><strong>篇首·虚弥二篇</strong></p>
-<p><a href="https://prayyueyu.github.io/post/yun-wang-yin-shi-sang/">云亡引·世桑</a>→<a href="https://prayyueyu.github.io/post/chi-wang-yin-tian-ming/">赤亡引·天命</a>→<a href="https://prayyueyu.github.io/post/luan-wang-yin-tian-meng/">乱亡引·天梦</a>→哀亡引→天亡引</p>
+<p><a href="https://prayyueyu.github.io/post/yun-wang-yin-shi-sang/">云亡引·世桑</a>→<a href="https://prayyueyu.github.io/post/chi-wang-yin-tian-ming/">赤亡引·天命</a>→<a href="https://prayyueyu.github.io/post/luan-wang-yin-tian-meng/">乱亡引·天梦</a>→<a href="https://prayyueyu.github.io/post/ai-wang-yin-ci">哀亡引</a>→天亡引</p>
 <h1 id="天向">天向：</h1>
+<p><strong>篇首·<a href="https://prayyueyu.github.io/post/shen-ji-ren/">神纪·人</a></strong></p>
 <p>沉天引→灵天引→隐天引→归天引→梦天引</p>
 <h1 id="梦向">梦向：</h1>
 <p>柳梦引→星梦引→亡梦引→天梦引→柳&amp;星&amp;亡&amp;天·梦</p>
 <p><strong>提示：点击标题即可查看！(只有发表了的才能查看哦)</strong></p>
-<p>引篇的主要的体裁类似于<strong>乐府诗</strong>，但是我总感觉不像<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>q</mi><mi>a</mi><mi>q</mi></mrow><annotation encoding="application/x-tex">qaq</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">q</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">q</span></span></span></span></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[深夜の涙]]></title>
-        <id>https://prayyueyu.github.io/post/shen-ye-nolei/</id>
-        <link href="https://prayyueyu.github.io/post/shen-ye-nolei/">
-        </link>
-        <updated>2020-07-31T15:24:22.000Z</updated>
-        <content type="html"><![CDATA[<p>一曲酒中歌，半夜泪人魔。</p>
-<p>杨花尽，风飘絮，半轮金月随波起。<br>
-子规啼，梦依稀，满枕清流未曾息。</p>
-<p>一剑踏青云，与舞共朝夕。醉魂逐轻影，飞雁孤楼离。</p>
-<p>三年如一日，与君挥梦迹。不辞此生乐，得君满天吉！</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[星柳引·天亡影]]></title>
-        <id>https://prayyueyu.github.io/post/xing-liu-yin-tian-wang-ying/</id>
-        <link href="https://prayyueyu.github.io/post/xing-liu-yin-tian-wang-ying/">
-        </link>
-        <updated>2020-07-12T12:41:08.000Z</updated>
-        <content type="html"><![CDATA[<p>柳丝既尽，星影初现。百枝凤鸣，待之万年。</p>
-<p>星柳。垂年古木，仰面长星。柳桥通天河，欲为命人引。千山隐晖，苍原雅洞，终以寻真仙。<br>
-纵得吟九霄，横遍落长袍。两星混虚出，震惶伴天朝。</p>
-<p>天亡。萧萧微南洲，伴酒独轻舟。我影舞三清，月倚泪山壁。夕沉惊飞鸟，万星繁夜明。<br>
-初龙腾渊，啸击万谷；雏凤展翅，烈火焚天。</p>
-<p>两星若有相逢时，无言，湿白袖。</p>
-<p>备注：创作时间为<strong>中考期间</strong></p>
 ]]></content>
     </entry>
 </feed>
