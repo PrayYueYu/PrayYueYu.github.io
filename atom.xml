@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://prayyueyu.github.io</id>
     <title>月雩の诗</title>
-    <updated>2021-01-01T02:51:47.319Z</updated>
+    <updated>2021-01-29T16:26:24.236Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://prayyueyu.github.io"/>
     <link rel="self" href="https://prayyueyu.github.io/atom.xml"/>
@@ -10,6 +10,39 @@
     <logo>https://prayyueyu.github.io/images/avatar.png</logo>
     <icon>https://prayyueyu.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 月雩の诗</rights>
+    <entry>
+        <title type="html"><![CDATA[故 楼 梦]]></title>
+        <id>https://prayyueyu.github.io/post/gu-lou-meng/</id>
+        <link href="https://prayyueyu.github.io/post/gu-lou-meng/">
+        </link>
+        <updated>2021-01-29T15:50:17.000Z</updated>
+        <content type="html"><![CDATA[<p>黄鹤散去云悠悠，天岳阳飞鲁班斗。</p>
+<p>滕王元婴恋故土，鹳雀依山千古流。</p>
+<p>蓬莱有名其无境，烟雨朦胧得妃意。</p>
+<p>太白一饮二十载，城隍何年复往岁！</p>
+<p>阅江千里六百年，真武摘星斗轩云。</p>
+<p>甲秀状元天下知，天心祭神得文昌！</p>
+<p>天一阁前万经藏，望江苍竹浪辽阔。</p>
+<p>大观道法火龙镇，钟鼓天地锁魍魉。(蛟龙)</p>
+<p>千古留名，万世昌盛！</p>
+<p>畏于齐云落星，叹于井干丽谯。</p>
+<p>幽幽神径，复道以寻：</p>
+<p>“天雩伴亡嫮，浮花飞燕云。</p>
+<p>黯月随血戈，齐眉望红尘。</p>
+<p>雨、影、星、风 ；流、幻、彩、灵。”</p>
+<p>九州巍峨，破石惊天；</p>
+<p>乾坤流转，壮哉我华夏，与天同寿！</p>
+<p>「梦则幻矣，楼之辞矣。若为君故，故楼之梦矣。」</p>
+<h1 id="楼">楼</h1>
+<p>古代名楼：</p>
+<p>黄鹤楼、岳阳楼、滕王阁、鹳雀楼、蓬莱阁、烟雨楼、太白楼、城隍阁；<br>
+阅江楼、真武阁、甲秀楼、天心阁、天一阁、望江楼、大观楼、钟鼓楼。</p>
+<p>自创：</p>
+<p>天雩故楼、亡嫮神阁、浮花梦楼、飞燕云阁、黯月云楼、血戈战阁、齐眉楼宇、红尘驿站</p>
+<p>齐眉楼宇之下有：<br>
+”雨、影、星、风、流、幻、彩、灵 “ 八座楼阁</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[神纪·人]]></title>
         <id>https://prayyueyu.github.io/post/shen-ji-ren/</id>
@@ -150,29 +183,6 @@
         <updated>2020-09-12T03:14:21.000Z</updated>
         <content type="html"><![CDATA[<p>半生愁肠断，半生人未还。</p>
 <p>若问归何处，半生空吟弹。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[引篇·目录]]></title>
-        <id>https://prayyueyu.github.io/post/yin-pian-mu-lu/</id>
-        <link href="https://prayyueyu.github.io/post/yin-pian-mu-lu/">
-        </link>
-        <updated>2020-08-27T07:53:36.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="柳向">柳向：</h1>
-<p><strong>篇首·<a href="https://prayyueyu.github.io/post/zui-hua-yin">醉花引</a></strong></p>
-<p><a href="https://prayyueyu.github.io/post/yin-liu-yin/">阴柳引</a>→<a href="https://prayyueyu.github.io/post/can-liu-yin/">残柳引</a>→<a href="https://prayyueyu.github.io/post/cang-liu-yin/">苍柳引</a>→<a href="https://prayyueyu.github.io/post/zui-liu-yin-gu-ren-an-zai-xi">醉柳引·故人安在兮</a>→<a href="https://prayyueyu.github.io/post/xing-liu-yin-tian-wang-ying/">星柳引·天亡影</a></p>
-<h1 id="星向">星向：</h1>
-<p><strong>篇首·引·葬灵引</strong></p>
-<p><a href="https://prayyueyu.github.io/post/jie-dao-xing-yin/">劫·盗星引</a>→辞·斗星引→罔·碎星引→苍·极星引→终·亡星引</p>
-<h1 id="亡向">亡向：</h1>
-<p><strong>篇首·虚弥二篇</strong></p>
-<p><a href="https://prayyueyu.github.io/post/yun-wang-yin-shi-sang/">云亡引·世桑</a>→<a href="https://prayyueyu.github.io/post/chi-wang-yin-tian-ming/">赤亡引·天命</a>→<a href="https://prayyueyu.github.io/post/luan-wang-yin-tian-meng/">乱亡引·天梦</a>→<a href="https://prayyueyu.github.io/post/ai-wang-yin-ci">哀亡引</a>→天亡引</p>
-<h1 id="天向">天向：</h1>
-<p><strong>篇首·<a href="https://prayyueyu.github.io/post/shen-ji-ren/">神纪·人</a></strong></p>
-<p>沉天引→灵天引→隐天引→归天引→梦天引</p>
-<h1 id="梦向">梦向：</h1>
-<p>柳梦引→星梦引→亡梦引→天梦引→柳&amp;星&amp;亡&amp;天·梦</p>
-<p><strong>提示：点击标题即可查看！(只有发表了的才能查看哦)</strong></p>
 ]]></content>
     </entry>
 </feed>
