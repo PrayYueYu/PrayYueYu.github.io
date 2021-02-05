@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://prayyueyu.github.io</id>
     <title>月雩の诗</title>
-    <updated>2021-01-29T16:26:24.236Z</updated>
+    <updated>2021-02-05T04:52:26.743Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://prayyueyu.github.io"/>
     <link rel="self" href="https://prayyueyu.github.io/atom.xml"/>
@@ -11,12 +11,28 @@
     <icon>https://prayyueyu.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 月雩の诗</rights>
     <entry>
+        <title type="html"><![CDATA[百花陨]]></title>
+        <id>https://prayyueyu.github.io/post/bai-hua-yun/</id>
+        <link href="https://prayyueyu.github.io/post/bai-hua-yun/">
+        </link>
+        <updated>2021-02-01T16:01:58.000Z</updated>
+        <content type="html"><![CDATA[<p>百花陨，鸟兽惊。白衣飘，万里凝。<br>
+醉卧长沙不自知，血月叹夜酒肠醒。</p>
+<p>倒梦雨，归泪影。沉天意，千凤鸣。<br>
+青舟点水涟漪淡，听风轩前剪烛情。</p>
+<p>西窗云，南门冥。柳絮起，九州行。<br>
+当年与君执手，昔日鱼雁共颦。</p>
+<p>复何叹，复何叹！唯见百花陨。</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[故 楼 梦]]></title>
         <id>https://prayyueyu.github.io/post/gu-lou-meng/</id>
         <link href="https://prayyueyu.github.io/post/gu-lou-meng/">
         </link>
         <updated>2021-01-29T15:50:17.000Z</updated>
-        <content type="html"><![CDATA[<p>黄鹤散去云悠悠，天岳阳飞鲁班斗。</p>
+        <content type="html"><![CDATA[<h2 id="谨以此篇证道天下">谨以此篇，证道天下！</h2>
+<p>黄鹤散去云悠悠，天岳阳飞鲁班斗。</p>
 <p>滕王元婴恋故土，鹳雀依山千古流。</p>
 <p>蓬莱有名其无境，烟雨朦胧得妃意。</p>
 <p>太白一饮二十载，城隍何年复往岁！</p>
@@ -59,6 +75,26 @@
 七八星河半春绝，百转龙吟正气荡！</p>
 <p><strong>2020再见，2021你好！</strong><br>
 <strong>注：2021元旦致辞</strong></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[天亡引·归]]></title>
+        <id>https://prayyueyu.github.io/post/tian-wang-yin-gui/</id>
+        <link href="https://prayyueyu.github.io/post/tian-wang-yin-gui/">
+        </link>
+        <updated>2020-12-07T04:23:13.000Z</updated>
+        <content type="html"><![CDATA[<p>心与莲动，亦与风响。</p>
+<p>风花月独我一人醉，伴苍穹明月共此生。<br>
+此去百梦未丈量，对闲添酒愁徒增。</p>
+<p>清溪青兮，如鱼噬天。柳絮留荧，未见天亡。<br>
+乌丝意断，墨隐沙夜。幽然静凝，惊鸣万山。</p>
+<p>九州一马踏平川，金戈百方破人胆。<br>
+一剑意起万生鸣，古今谁问此道还？</p>
+<p>尘剑落，月水流。花满楼，情意柔。</p>
+<p>当年旧景不复，长叹涕泗流。<br>
+苦念卿卿之影，终觉梦一场。</p>
+<p>归·旧影，归·离别。<br>
+归·来世，归 满 情。</p>
 ]]></content>
     </entry>
     <entry>
@@ -157,32 +193,6 @@
         <updated>2020-10-06T07:45:21.000Z</updated>
         <content type="html"><![CDATA[<p>天依玄兔黯玉浮，仙子愁颦太阴孤。<br>
 金鹊今夕泣梦至，哪堪众生桂影疏！</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[云亡引·世桑]]></title>
-        <id>https://prayyueyu.github.io/post/yun-wang-yin-shi-sang/</id>
-        <link href="https://prayyueyu.github.io/post/yun-wang-yin-shi-sang/">
-        </link>
-        <updated>2020-09-14T16:24:52.000Z</updated>
-        <content type="html"><![CDATA[<p>柳梦一别，千秋空载！今有亡云，叹道桑海。</p>
-<p>云亡云亡，且知世桑？浮云沉龙，金光万丈。归燕如月，柔情千行。<br>
-世间万物，皆以定数。为之以未，满向荣光。背负青剑，意指八荒！</p>
-<p>云亡云亡，浮世且桑？朝夕之间，白鹭衔天。彩云缥缈，若隐百仙。<br>
-午夜之间，且闻蝉意。清风明霁，幽微香溢。</p>
-<p>云亡云亡，为何世桑？古有圣者，九州震惶。千夫所指，唯我独皇。<br>
-王子百将，不为且狂。今我德功，四海宁祥。桑桑！</p>
-<p>云亡云亡，何为世桑？</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[半生歌]]></title>
-        <id>https://prayyueyu.github.io/post/ban-sheng-ge/</id>
-        <link href="https://prayyueyu.github.io/post/ban-sheng-ge/">
-        </link>
-        <updated>2020-09-12T03:14:21.000Z</updated>
-        <content type="html"><![CDATA[<p>半生愁肠断，半生人未还。</p>
-<p>若问归何处，半生空吟弹。</p>
 ]]></content>
     </entry>
 </feed>
