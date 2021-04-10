@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://prayyueyu.github.io</id>
     <title>月雩の诗</title>
-    <updated>2021-02-28T09:13:28.620Z</updated>
+    <updated>2021-04-10T15:00:47.046Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://prayyueyu.github.io"/>
     <link rel="self" href="https://prayyueyu.github.io/atom.xml"/>
@@ -10,6 +10,22 @@
     <logo>https://prayyueyu.github.io/images/avatar.png</logo>
     <icon>https://prayyueyu.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 月雩の诗</rights>
+    <entry>
+        <title type="html"><![CDATA[隐天引·残]]></title>
+        <id>https://prayyueyu.github.io/post/yin-tian-yin-can/</id>
+        <link href="https://prayyueyu.github.io/post/yin-tian-yin-can/">
+        </link>
+        <updated>2021-04-02T14:47:54.000Z</updated>
+        <content type="html"><![CDATA[<p>残星噬月，断崖千绝。寒风萧萧兮，珠露，似人归。</p>
+<p>隐旧庄。夕阳随风下，南园故人耕。争与惊雨时，醉梦尽人铛。<br>
+酒问酹八荒，君且看，麦黄伴鸡鸣。</p>
+<p>隐柳林。何处无柳迹？只待妄中许！总角犹可察，不负相死生。<br>
+莫问月水流，空闻山林声。几时鸟兽撼天地！憔兮。</p>
+<p>隐无觅。鱼云残卷，风噬霜燕。非也？梦耶？旧也矣。<br>
+春江穿年轮，赤灯明青河。但道人烟薄，晨瞑无穷山。</p>
+<p>思故渊，恋旧园。安能容我身？意清平。一剑破星辰！</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[灵天引·花]]></title>
         <id>https://prayyueyu.github.io/post/ling-tian-yin-hua/</id>
@@ -179,27 +195,6 @@
 3.本人文笔不太好，书读得少，望谅解！
 </code></pre>
 <h1 id="愿有缘人三羊开泰有情人终成眷属">愿，有缘人三羊开泰，有情人终成眷属！</h1>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[乱亡引·天梦]]></title>
-        <id>https://prayyueyu.github.io/post/luan-wang-yin-tian-meng/</id>
-        <link href="https://prayyueyu.github.io/post/luan-wang-yin-tian-meng/">
-        </link>
-        <updated>2020-10-29T15:23:59.000Z</updated>
-        <content type="html"><![CDATA[<p>&quot;引：</p>
-<p>余作诗三年，得诗百篇，已然近万字，乐矣。</p>
-<p>叹如今，学务繁重，盖数十日而一诗耳！</p>
-<p>心之愁思，如涛涛积水，挥之不去，痛之心骨。</p>
-<p><strong>愿天地神佑，苍生得福</strong>。&quot;</p>
-<p>璧月沉江，乱影叠生。素清分辉，血映迷城。</p>
-<p>天梦锁。世俗万难，难于破红尘。古闻兮鸟道，街行喜客烟缥缈；<br>
-今采月中湖，冷萧清归风嘶鸣。伊人憔悴，折柳左右。凤枝隐兮，三狼其后。</p>
-<p>天梦离。鬼冥幽使，问之天梦事。众皇临兮傲天王，无惧兮，利剑征随斩百方！<br>
-何时潇暮笛罗角，悠然小楼，望尽天涯路。</p>
-<p>天梦归。一曲作罢，溪水泱泱！青山之上，未曰有之。虚神祭之，天下梦之！<br>
-却道葬谷黑云压，静兮，凭轩泣。几时兮？未能有之，自当别离。</p>
-<p>天梦天梦，吾欲悔之。天梦天梦，吾必行之！</p>
 ]]></content>
     </entry>
 </feed>
