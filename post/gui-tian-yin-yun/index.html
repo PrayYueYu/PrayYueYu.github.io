@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="世间如此广大，应有我一席。 (除非作者允许，禁止转载)">
 <meta name="theme-color" content="#495057">
-<title>关于博客 | 月雩の诗</title>
+<title>归天引·云 | 月雩の诗</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1625820719109">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -51,8 +51,8 @@
 </script>
 
 
-  <meta name="description" content="关于博客" />
-  <meta name="keywords" content="about" />
+  <meta name="description" content="归天引·云" />
+  <meta name="keywords" content="杂诗,诗集,诗词" />
 </head>
 
 <body>
@@ -229,8 +229,7 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            <div class="post-side-meta" id="post_side_meta">
-              
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -301,192 +300,6 @@
   </div>
 
 </div>
-            </div>
-            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
-              <div class="toc-box right-motion">
-  <div class="toc-wrapper auto-number auto"
-    id="toc_wrapper">
-    <ul class="markdownIt-TOC">
-<li><a href="#%E5%BE%88%E9%AB%98%E5%85%B4%E4%BD%A0%E8%83%BD%E5%9C%A8%E8%8C%AB%E8%8C%AB%E4%BA%BA%E6%B5%B7%E4%B8%AD%E9%81%87%E8%A7%81%E4%BD%A0">很高兴你能在茫茫人海中遇见你</a></li>
-<li><a href="#%E6%84%BF%E6%9C%89%E7%BC%98%E4%BA%BA%E4%B8%89%E7%BE%8A%E5%BC%80%E6%B3%B0%E6%9C%89%E6%83%85%E4%BA%BA%E7%BB%88%E6%88%90%E7%9C%B7%E5%B1%9E">愿，有缘人三羊开泰，有情人终成眷属！</a></li>
-</ul>
-
-  </div>
-</div>
-
-<script>
-
-  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
-  let active = 'active-show', activeClass = 'active-current';
-  let tocWrapper = document.querySelector('#toc_wrapper');
-  let tocContent = tocWrapper.children[0];
-  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
-
-  function addTocNumber(elem, deep) {
-    if (!elem) {
-      return;
-    }
-    let prop = elem.__proto__;
-
-    if (prop === HTMLUListElement.prototype) {
-      for (let i = 0; i < elem.children.length; i++) {
-        addTocNumber(elem.children[i], deep + (i + 1) + '.');
-      }
-    } else if (prop === HTMLLIElement.prototype) {
-      // 保存li元素
-      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
-        lList.push(elem);
-      }
-      for (let i = 0; i < elem.children.length; i++) {
-        let cur = elem.children[i];
-        if (cur.__proto__ === HTMLAnchorElement.prototype) {
-          if (autoNumber) {
-            cur.text = deep + ' ' + cur.text;
-          }
-        } else if (cur.__proto__ === HTMLUListElement.prototype) {
-          addTocNumber(cur, deep);
-        }
-      }
-    }
-  }
-
-  function removeParentActiveClass() {
-    let parents = tocContent.querySelectorAll('.' + active)
-    parents.forEach(function (elem) {
-      elem.classList.remove(active);
-    });
-  }
-
-  function addActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.add(activeClass);
-    }
-  }
-
-  function removeActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.remove(activeClass);
-    }
-  }
-
-  function addActiveLiElemment(elem, parent) {
-    if (!elem || elem === parent) {
-      return;
-    } else {
-      if (elem.__proto__ === HTMLLIElement.prototype) {
-        elem.classList.add(active);
-      }
-      addActiveLiElemment(elem.parentElement, parent);
-    }
-  }
-
-  function showToc() {
-    if (tocWrapper) {
-      postBody = document.querySelector('#post_body');
-      for (let i = 0; i < postBody.children.length; i++) {
-        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-          hList.push(postBody.children[i]);
-        }
-      }
-      if (tocWrapper.classList.contains('compress')) {
-        tocContent.classList.add('closed');
-      } else if (tocWrapper.classList.contains('no_compress')) {
-        tocContent.classList.add('expanded');
-      } else {
-        if (hList.length > 10) {
-          active = 'active-hidden'
-          tocContent.classList.add('closed');
-        } else {
-          tocContent.classList.add('expanded');
-        }
-      }
-    }
-  }
-
-  (function () {
-    // 处理不是从#一级标题开始目录
-    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
-      let con = tocContent.children[0].children[0];
-      tocContent.innerHTML = con.innerHTML;
-    }
-    let markdownItTOC = document.querySelector('.markdownIt-TOC');
-    let innerHeight = window.innerHeight;
-    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
-    addTocNumber(tocContent, '');
-  })();
-
-  document.addEventListener('scroll', function (e) {
-    if (lList.length <= 0) {
-      return;
-    }
-    let scrollTop = document.scrollingElement.scrollTop + 10;
-    let dir;
-
-    if (lastTop - scrollTop > 0) {
-      dir = 'up';
-    } else {
-      dir = 'down';
-    }
-
-    lastTop = scrollTop;
-    if (scrollTop <= 0) {
-      if (lastIndex >= 0 && lastIndex < hList.length) {
-        lList[lastIndex].classList.remove(activeClass);
-      }
-      return;
-    }
-
-    let current = 0, hasFind = false;
-    for (let i = 0; i < hList.length; i++) {
-      if (hList[i].offsetTop > scrollTop) {
-        current = i;
-        hasFind = true;
-        break;
-      }
-    }
-    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
-      current = hList.length - 1;
-    } else {
-      current--;
-    }
-    if (dir === 'down') {
-      if (current > lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex)
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    } else {
-      if (current < lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex);
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    }
-  });
-
-
-  window.addEventListener('load', function () {
-    showToc();
-    document.querySelector('#sidebar').style = 'display: block;';
-    tocWrapper.classList.add('toc-active');
-    setTimeout(function () {
-      if ("createEvent" in document) {
-        let evt = document.createEvent("HTMLEvents");
-        evt.initEvent("scroll", false, true);
-        document.dispatchEvent(evt);
-      }
-      else {
-        document.fireEvent("scroll");
-      }
-    }, 500)
-  })
-
-</script>
-            </div>
           
         
       </div>
@@ -574,22 +387,16 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://prayyueyu.github.io/post/about/">
-      关于博客
+    <a class="post-title-link" href="https://prayyueyu.github.io/post/gui-tian-yin-yun/">
+      归天引·云
     </a>
   </h1>
   <div class="post-meta">
     
-    <span class="meta-item">
-      <i class="fa fa-thumb-tack"></i>
-      <span class="language" data-lan="top">置顶</span>
-      <span class="post-meta-divider">|</span>
-    </span>
-    
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-10-30 19:09:48">2020-10-30</span>
+      <span class="publish-time" data-t="2021-04-05 23:57:11">2021-04-05</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -598,8 +405,20 @@
       <span class="pc-show language" data-lan="category-in">分类于</span>
       
       
-      <a href="https://prayyueyu.github.io/tag/Jc6za1ZKS/">
-        <span>about</span>
+      <a href="https://prayyueyu.github.io/tag/QsKZMNTq0/">
+        <span>杂诗</span>
+      </a>、
+      
+      
+      
+      <a href="https://prayyueyu.github.io/tag/RfSZ2qd_v/">
+        <span>诗集</span>
+      </a>、
+      
+      
+      
+      <a href="https://prayyueyu.github.io/tag/QubC5DOzm/">
+        <span>诗词</span>
       </a>
       
       
@@ -613,12 +432,12 @@
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>191<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>140<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/about/" data-flag-title="关于博客" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/gui-tian-yin-yun/" data-flag-title="归天引·云" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -627,25 +446,59 @@
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <h1 id="很高兴你能在茫茫人海中遇见你">很高兴你能在茫茫人海中遇见你</h1>
-<p>本博客与<a href="https://pray-yueyu.github.io/">月雩の小窝</a>为孪生博客(已停更)</p>
-<p>博客上主要会放一些自己写的诗，更新时间不定</p>
-<p><strong>博客发布的时间即为每首诗的创作完成时间，误差时间<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⩽</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">\leqslant 0.5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7733399999999999em;vertical-align:-0.13667em;"></span><span class="mrel amsrm">⩽</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">5</span></span></span></span>天</strong></p>
-<p>另一个博客上的诗会在近期删掉(只是隐藏)</p>
-<p>感谢<a href="https://yeming.site/">Madara</a>的主题<a href="https://github.com/hsxyhao/gridea-theme-next">NexT</a>！</p>
-<p>有什么问题欢迎留言呀！</p>
-<pre><code>注：
-
-1.本博客所有篇目禁止任何人以任何形式进行转载，但作者允许除外
-
-2.图片来自网上，有侵权请联系删除！
-
-3.本人文笔不太好，书读得少，望谅解！
-</code></pre>
-<h1 id="愿有缘人三羊开泰有情人终成眷属">愿，有缘人三羊开泰，有情人终成眷属！</h1>
+              <p>悠云浮浮，苍生得福。王侯将相，莫问但舞。</p>
+<p>君且看！山地倒兮归梦雨，天石崩兮叹无息。<br>
+安天之命，行天之义！晚风凉千宵，但与月长眠。无为而长吟，半生流离缘。</p>
+<p>幽南暗，落芳亭。但闻笛，万山暝。<br>
+夕燕携幽香，洒我儿时窗。挥汗如泪鸣，安能识模样？</p>
+<p>昨日道路漫，今昔言九霄。岂为利天下，怎得狂言譊？<br>
+坐行八万里，遥望九千星。待到山穷时，自得乾坤影。</p>
+<p>&quot;天&quot;将归何方？</p>
 
             </div>
             
+            
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：</strong>
+      月雩·薇嫭
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://prayyueyu.github.io/post/gui-tian-yin-yun/" title="归天引·云">https://prayyueyu.github.io/post/gui-tian-yin-yun/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+      <a href="https://prayyueyu.github.io/tag/QsKZMNTq0/"># 杂诗</a>
+    
+      <a href="https://prayyueyu.github.io/tag/RfSZ2qd_v/"># 诗集</a>
+    
+      <a href="https://prayyueyu.github.io/tag/QubC5DOzm/"># 诗词</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+        <i class="fa fa-chevron-left"></i>
+        <a class="nav-pc-next" title="梦天引·非也" href="https://prayyueyu.github.io/post/meng-tian-yin-fei-ye/">梦天引·非也</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="梦天引·非也" href="https://prayyueyu.github.io/post/meng-tian-yin-fei-ye/">上一篇</a>
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="隐天引·残" href="https://prayyueyu.github.io/post/yin-tian-yin-can/">隐天引·残</a>
+        <a class="nav-mobile-next" title="隐天引·残" href="https://prayyueyu.github.io/post/yin-tian-yin-can/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
+</div>
             
             
   <script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>

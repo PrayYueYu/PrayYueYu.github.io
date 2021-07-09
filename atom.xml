@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://prayyueyu.github.io</id>
     <title>月雩の诗</title>
-    <updated>2021-05-30T06:53:19.603Z</updated>
+    <updated>2021-07-09T09:08:04.949Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://prayyueyu.github.io"/>
     <link rel="self" href="https://prayyueyu.github.io/atom.xml"/>
@@ -10,6 +10,47 @@
     <logo>https://prayyueyu.github.io/images/avatar.png</logo>
     <icon>https://prayyueyu.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 月雩の诗</rights>
+    <entry>
+        <title type="html"><![CDATA[梦天引·非也]]></title>
+        <id>https://prayyueyu.github.io/post/meng-tian-yin-fei-ye/</id>
+        <link href="https://prayyueyu.github.io/post/meng-tian-yin-fei-ye/">
+        </link>
+        <updated>2021-04-10T15:50:10.000Z</updated>
+        <content type="html"><![CDATA[<p>梦也，情也，是乃人之故也，非及人之初也。<br>
+欲也，悔也，虽为人之本也，可叹人之伤也。<br>
+生也，死也，此中有云，谓之天梦。</p>
+<p>何以谓也？苍墨萧然引，彩蝶扑冷屏。<br>
+今夕佳岁君需记，未向来生悔恨多。盖魂散，泪无耶？</p>
+<p>试问千古何为情，千古非言空长怨。<br>
+问之以天地，答之以寰宇。<br>
+试作千古愁满面，千古不应徒长泪。</p>
+<p>不识情面生，枯星苦月少。<br>
+又是天极明，向之以狂啸。<br>
+人非情而不人，薄，丧矣。</p>
+<p>倒之欲兮碎无时，山晨忽闻鸣。<br>
+似为往，非以伤。来着可谏，吾之道，虚妄者未冥。<br>
+久也，久也。终得是，复哀之。</p>
+<p>百花影黯黯，淡俗破云霄。<br>
+儿时风事去，切莫问，莫问。天伤。</p>
+<p>天涯自此浮沉断，意萧然。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[归天引·云]]></title>
+        <id>https://prayyueyu.github.io/post/gui-tian-yin-yun/</id>
+        <link href="https://prayyueyu.github.io/post/gui-tian-yin-yun/">
+        </link>
+        <updated>2021-04-05T15:57:11.000Z</updated>
+        <content type="html"><![CDATA[<p>悠云浮浮，苍生得福。王侯将相，莫问但舞。</p>
+<p>君且看！山地倒兮归梦雨，天石崩兮叹无息。<br>
+安天之命，行天之义！晚风凉千宵，但与月长眠。无为而长吟，半生流离缘。</p>
+<p>幽南暗，落芳亭。但闻笛，万山暝。<br>
+夕燕携幽香，洒我儿时窗。挥汗如泪鸣，安能识模样？</p>
+<p>昨日道路漫，今昔言九霄。岂为利天下，怎得狂言譊？<br>
+坐行八万里，遥望九千星。待到山穷时，自得乾坤影。</p>
+<p>&quot;天&quot;将归何方？</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[隐天引·残]]></title>
         <id>https://prayyueyu.github.io/post/yin-tian-yin-can/</id>
@@ -21,7 +62,7 @@
 酒问酹八荒，君且看，麦黄伴鸡鸣。</p>
 <p>隐柳林。何处无柳迹？只待妄中许！总角犹可察，不负相死生。<br>
 莫问月水流，空闻山林声。几时鸟兽撼天地！憔兮。</p>
-<p>隐无觅。鱼云残卷，风噬霜燕。非也？梦耶？旧也矣。<br>
+<p>隐无觅。鱼云残卷，风噬霜燕。非也？梦耶？久也矣。<br>
 春江穿年轮，赤灯明青河。但道人烟薄，晨瞑无穷山。</p>
 <p>思故渊，恋旧园。安能容我身？意清平。一剑破星辰！</p>
 ]]></content>
@@ -160,41 +201,6 @@
 <p>·红尘<strong>辞</strong>，百里清梦流！三阳冥幽，双魂而立。丝轻落，月光隐，<br>
 碧波未云。夜烛短，亦成仙。逍遥唯我，天地独尊。</p>
 <p>·来世<strong>迎</strong>，自修《衰梦影》。不负卿，今夕，何年？</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[咏奉节]]></title>
-        <id>https://prayyueyu.github.io/post/yong-feng-jie/</id>
-        <link href="https://prayyueyu.github.io/post/yong-feng-jie/">
-        </link>
-        <updated>2020-11-01T16:34:54.000Z</updated>
-        <content type="html"><![CDATA[<p>白帝腾龙破九霄，天坠沉崖烟飘渺。</p>
-<p>江波纵横南北坼，仙湖霖散渔人劳。</p>
-<p>注：比赛诗词</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[关于博客]]></title>
-        <id>https://prayyueyu.github.io/post/about/</id>
-        <link href="https://prayyueyu.github.io/post/about/">
-        </link>
-        <updated>2020-10-30T11:09:48.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="很高兴你能在茫茫人海中遇见你">很高兴你能在茫茫人海中遇见你</h1>
-<p>本博客与<a href="https://pray-yueyu.github.io/">月雩の小窝</a>为孪生博客(已停更)</p>
-<p>博客上主要会放一些自己写的诗，更新时间不定</p>
-<p><strong>博客发布的时间即为每首诗的创作完成时间，误差时间<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⩽</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">\leqslant 0.5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7733399999999999em;vertical-align:-0.13667em;"></span><span class="mrel amsrm">⩽</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">5</span></span></span></span>天</strong></p>
-<p>另一个博客上的诗会在近期删掉(只是隐藏)</p>
-<p>感谢<a href="https://yeming.site/">Madara</a>的主题<a href="https://github.com/hsxyhao/gridea-theme-next">NexT</a>！</p>
-<p>有什么问题欢迎留言呀！</p>
-<pre><code>注：
-
-1.本博客所有篇目禁止任何人以任何形式进行转载，但作者允许除外
-
-2.图片来自网上，有侵权请联系删除！
-
-3.本人文笔不太好，书读得少，望谅解！
-</code></pre>
-<h1 id="愿有缘人三羊开泰有情人终成眷属">愿，有缘人三羊开泰，有情人终成眷属！</h1>
 ]]></content>
     </entry>
 </feed>
