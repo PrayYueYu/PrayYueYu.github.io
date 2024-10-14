@@ -2,14 +2,88 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://prayyueyu.github.io</id>
     <title>月雩の诗</title>
-    <updated>2021-11-20T14:11:46.721Z</updated>
+    <updated>2024-10-14T16:17:50.938Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://prayyueyu.github.io"/>
     <link rel="self" href="https://prayyueyu.github.io/atom.xml"/>
     <subtitle>世间如此广大，应有我一席。 (除非作者允许，禁止转载)</subtitle>
     <logo>https://prayyueyu.github.io/images/avatar.png</logo>
     <icon>https://prayyueyu.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, 月雩の诗</rights>
+    <rights>All rights reserved 2024, 月雩の诗</rights>
+    <entry>
+        <title type="html"><![CDATA[风兮]]></title>
+        <id>https://prayyueyu.github.io/post/feng-xi/</id>
+        <link href="https://prayyueyu.github.io/post/feng-xi/">
+        </link>
+        <updated>2022-12-11T19:47:14.000Z</updated>
+        <content type="html"><![CDATA[<p>西溪惜夕兮，梦解三月花。(嘻嘻嘻嘻嘻)<br>
+迷途冥冥黯，九天落彩霞。<br>
+得卿足矣，却道各执情兮冷寒鸦。(情=心+青)</p>
+<p>心有千秋月，洒笔成山河。(心)<br>
+不知清欢味，旦暮婴愁多。<br>
+泪眼相遥望，玉艭湿疏箔。(玉艭-&gt;月-&gt;我)<br>
+终日东风伴，不觉香衣薄。(老婆)</p>
+<p>青冥风无影，碧笺积旧尘。(青)<br>
+白鹤不得过，萧萧醉残魂。(指快递寄不出去 呜呜呜)<br>
+与卿逍遥游，燕扬万里芬。(想象，燕：代表爱情)<br>
+对花花不语，清泪满木樽。(现在，老公)</p>
+<p>已而乾坤倒挂，魂离天外。蓦蓦间，见林中风起，百兽合鸣，芳菲扑鼻……<br>
+拾彩花兮饮露，梦天神兮云雾。<br>
+驾白鹭兮长鸣，沉天际兮归路。<br>
+坐小亭兮叹流水，行深山兮自乐。<br>
+采芙蓉兮带女萝，倚雪柳兮酒自酌。<br>
+醉香泥兮草葳蕤，明月柔兮影婆娑。<br>
+搴秋芪兮酿琼浆，隐山林兮琴幽扬。(酿酒用黄芪哦，搴：取)<br>
+远尘烟兮人无迹，陌上景兮月无双。</p>
+<p>醒来惊恨清夜短，未尽酣梦泪几行。<br>
+唯愿他日，醉含红豆，笑向檀郎。</p>
+<p>——月雩，2022.12.12   4.18</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[无题]]></title>
+        <id>https://prayyueyu.github.io/post/wu-ti/</id>
+        <link href="https://prayyueyu.github.io/post/wu-ti/">
+        </link>
+        <updated>2022-11-19T03:14:28.000Z</updated>
+        <content type="html"><![CDATA[<p>问君意何长？秋瑟伴流霜。<br>
+偷得闲半日，满城沉絮香。<br>
+昨日忧 ，今莫愁。<br>
+不堪回首，且试栀子酒。<br>
+酥红半醺故人醉，<br>
+燕子来时，梦里别离后。<br>
+辗转难眠黯星乱，<br>
+故里彩蝶，旧里挑灯看。<br>
+遥望天远无人还，<br>
+微意朦胧，泪忆入销残。<br>
+不知何处怨杨柳，<br>
+怒对青天 ，却似黄花瘦。<br>
+万事浮云眼前过，<br>
+独怜夜烛日萧薄。<br>
+最是人间肠摧处，<br>
+风吹动，下莲舟。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[堕·魔]]></title>
+        <id>https://prayyueyu.github.io/post/duo-mo/</id>
+        <link href="https://prayyueyu.github.io/post/duo-mo/">
+        </link>
+        <updated>2022-11-19T02:58:12.000Z</updated>
+        <content type="html"><![CDATA[<p>独坐小溪，驿道风起。<br>
+班马呕哑，微嘶鸣笛。<br>
+长歌渐远，恍若浑兮。<br>
+萧萧醉肠，且听今夕。<br>
+花涟露珠，月水星稀。<br>
+梦吟蝉鸣，自恨泪意。<br>
+不觉酩酊，孤卧山壁。<br>
+几时虎啸，气撼天云。</p>
+<p>黎曜清谷，初开眸。<br>
+半卷红帘，狂苍穹。<br>
+今我欲堕，不复深渊。<br>
+唯有一曲，安魂沉眠。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[柳梦引·暗]]></title>
         <id>https://prayyueyu.github.io/post/liu-meng-yin-an/</id>
@@ -148,62 +222,6 @@
 <p>天雩故楼、亡嫮神阁、浮花梦楼、飞燕云阁、黯月云楼、血戈战阁、齐眉楼宇、红尘驿站</p>
 <p>齐眉楼宇之下有：<br>
 ”雨、影、星、风、流、幻、彩、灵 “ 八座楼阁</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[神纪·人]]></title>
-        <id>https://prayyueyu.github.io/post/shen-ji-ren/</id>
-        <link href="https://prayyueyu.github.io/post/shen-ji-ren/">
-        </link>
-        <updated>2020-12-31T02:31:26.000Z</updated>
-        <content type="html"><![CDATA[<p>千古亡魂，幽冥相轮。<br>
-破沉惊天羽，燕寄月归人。<br>
-谁道柳兮风随，岂无念卿之影！<br>
-三两桃酒满秋色，一语泣至何曾闻！</p>
-<p>万里纪神，天瑞齐降。<br>
-残枝去苦岁，乐与梦泪长。<br>
-无问夕沉水溅，不为愁颦之恨。<br>
-七八星河半春绝，百转龙吟正气荡！</p>
-<p><strong>2020再见，2021你好！</strong><br>
-<strong>注：2021元旦致辞</strong></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[沉天引·玉]]></title>
-        <id>https://prayyueyu.github.io/post/chen-tian-yin/</id>
-        <link href="https://prayyueyu.github.io/post/chen-tian-yin/">
-        </link>
-        <updated>2020-12-28T15:59:59.000Z</updated>
-        <content type="html"><![CDATA[<p>天亡之影，出于世桑。</p>
-<p>玉陨。天璃万转，飞宫沉雀，一朝共繁明。三两共饮，银河星稀，未曾道梦瀚。<br>
-昔时，月水流荧，鱼雁共影，剪烛愁颦，幻彩梦吟，红莲青冥。<br>
-坐长亭，赏小舟轻涟，惊起沙鸥鸣。</p>
-<p>玉隐。不见君，思君叹年长。来世漫归客，独卷愁心肠。<br>
-流光百道吾不能，飞入寻常待酒饮。<br>
-何处寻芳香？何日待梦桑！一曲意未尽，何曾遇天亡！</p>
-<p>玉无影。叹归叹归，九州共泪。莫归莫归，春墟之废。<br>
-闲花不复返，青山当勉励，明月遗所思。三言铸此生。</p>
-<p>枫夜冷风千柳尽，唯思君，念君，怜君之音。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[天亡引·归]]></title>
-        <id>https://prayyueyu.github.io/post/tian-wang-yin-gui/</id>
-        <link href="https://prayyueyu.github.io/post/tian-wang-yin-gui/">
-        </link>
-        <updated>2020-12-07T04:23:13.000Z</updated>
-        <content type="html"><![CDATA[<p>心与莲动，亦与风响。</p>
-<p>风花月独我一人醉，伴苍穹明月共此生。<br>
-此去百梦未丈量，对闲添酒愁徒增。</p>
-<p>清溪青兮，如鱼噬天。柳絮留荧，未见天亡。<br>
-乌丝意断，墨隐沙夜。幽然静凝，惊鸣万山。</p>
-<p>九州一马踏平川，金戈百方破人胆。<br>
-一剑意起万生鸣，古今谁问此道还？</p>
-<p>尘剑落，月水流。花满楼，情意柔。</p>
-<p>当年旧景不复，长叹涕泗流。<br>
-苦念卿卿之影，终觉梦一场。</p>
-<p>归·旧影，归·离别。<br>
-归·来世，归 满 情。</p>
 ]]></content>
     </entry>
 </feed>
