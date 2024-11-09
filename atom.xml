@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://prayyueyu.github.io</id>
     <title>月雩の诗</title>
-    <updated>2024-11-06T15:16:26.280Z</updated>
+    <updated>2024-11-09T11:12:22.868Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://prayyueyu.github.io"/>
     <link rel="self" href="https://prayyueyu.github.io/atom.xml"/>
@@ -16,7 +16,8 @@
         <link href="https://prayyueyu.github.io/post/acm-zhou-bao-114-1110/">
         </link>
         <updated>2024-11-06T14:02:46.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="欧拉筛">欧拉筛</h1>
+        <content type="html"><![CDATA[<p>完成题目：洛谷×7</p>
+<h1 id="欧拉筛">欧拉筛</h1>
 <pre><code class="language-c++">for(int i=2;i&lt;=M;i++){//M为上限
     if(!vis[i])P[++tot]=i;
     for(int j=1;j&lt;=tot;j++){
@@ -27,12 +28,12 @@
 }
 </code></pre>
 <p>以上为主要代码<br>
-某一个合数被筛掉时P[j] <em>i 中P[j] 一定为它的最小的质因数<br>
+某一个合数被筛掉时P[j] *i 中P[j] 一定为它的最小的质因数<br>
 假设有一个合数 F=(a^x1)(b^x2)(c^x3)<br>
 a b c都是质数且a&lt;b&lt;c<br>
 假设i=(a^x1)(c^x3)<br>
 当质数判断到P[j]=a的时候就会因为i%P[j]=0而退出，所以P[j]不会判断到P[j]=b，从而使F多判断一次<br>
-当i=(a^(x1-1))(b^x2)(c^x3)时，i的最小质因数为a或者b，所以一定会把a</em>i 判断为合数，然后在P[j]=a或者b的时候退出<br>
+当i=(a^(x1-1))(b^x2)(c^x3)时，i的最小质因数为a或者b，所以一定会把a*i 判断为合数，然后在P[j]=a或者b的时候退出<br>
 综上，F只会被判断一次，且必定会被判断到</p>
 <h1 id="__int128">__int128</h1>
 <p>__int128 数据的范围是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mo>(</mo><mo>−</mo><mn>2</mn><msup><mo>)</mo><mn>127</mn></msup><mo separator="true">,</mo><msup><mn>2</mn><mn>127</mn></msup><mo>−</mo><mn>1</mn><mo>]</mo></mrow><annotation encoding="application/x-tex">[(-2)^{127} ,2^{127}-1]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mopen">(</span><span class="mord">−</span><span class="mord">2</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">2</span><span class="mord mtight">7</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">2</span><span class="mord mtight">7</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">]</span></span></span></span><br>

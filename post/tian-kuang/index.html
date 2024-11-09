@@ -9,7 +9,7 @@
 <meta name="description" content="世间如此广大，应有我一席。 (除非作者允许，禁止转载)">
 <meta name="theme-color" content="#495057">
 <title>天·狂 | 月雩の诗</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1730906075702">
+<link rel="shortcut icon" href="/favicon.ico?v=1731150738111">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -1543,7 +1543,8 @@
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://prayyueyu.github.io/post/acm-zhou-bao-114-1110/"" data-c="
-          &lt;h1 id=&#34;欧拉筛&#34;&gt;欧拉筛&lt;/h1&gt;
+          &lt;p&gt;完成题目：洛谷×7&lt;/p&gt;
+&lt;h1 id=&#34;欧拉筛&#34;&gt;欧拉筛&lt;/h1&gt;
 &lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;for(int i=2;i&amp;lt;=M;i++){//M为上限
     if(!vis[i])P[++tot]=i;
     for(int j=1;j&amp;lt;=tot;j++){
@@ -1554,12 +1555,12 @@
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;以上为主要代码&lt;br&gt;
-某一个合数被筛掉时P[j] &lt;em&gt;i 中P[j] 一定为它的最小的质因数&lt;br&gt;
+某一个合数被筛掉时P[j] *i 中P[j] 一定为它的最小的质因数&lt;br&gt;
 假设有一个合数 F=(a^x1)(b^x2)(c^x3)&lt;br&gt;
 a b c都是质数且a&amp;lt;b&amp;lt;c&lt;br&gt;
 假设i=(a^x1)(c^x3)&lt;br&gt;
 当质数判断到P[j]=a的时候就会因为i%P[j]=0而退出，所以P[j]不会判断到P[j]=b，从而使F多判断一次&lt;br&gt;
-当i=(a^(x1-1))(b^x2)(c^x3)时，i的最小质因数为a或者b，所以一定会把a&lt;/em&gt;i 判断为合数，然后在P[j]=a或者b的时候退出&lt;br&gt;
+当i=(a^(x1-1))(b^x2)(c^x3)时，i的最小质因数为a或者b，所以一定会把a*i 判断为合数，然后在P[j]=a或者b的时候退出&lt;br&gt;
 综上，F只会被判断一次，且必定会被判断到&lt;/p&gt;
 &lt;h1 id=&#34;__int128&#34;&gt;__int128&lt;/h1&gt;
 &lt;p&gt;__int128 数据的范围是 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;msup&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;mn&gt;127&lt;/mn&gt;&lt;/msup&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mn&gt;127&lt;/mn&gt;&lt;/msup&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;[(-2)^{127} ,2^{127}-1]&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.064108em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.8141079999999999em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;mord mtight&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;mord mtight&#34;&gt;7&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.8141079999999999em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;mord mtight&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;mord mtight&#34;&gt;7&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;
