@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="世间如此广大，应有我一席。 (除非作者允许，禁止转载)">
 <meta name="theme-color" content="#495057">
-<title>乱亡引·天梦 | 月雩の诗</title>
+<title>ACM周报Ⅱ | 月雩の诗</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1732113713888">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -51,8 +51,8 @@
 </script>
 
 
-  <meta name="description" content="乱亡引·天梦" />
-  <meta name="keywords" content="诗集,诗词,引篇" />
+  <meta name="description" content="ACM周报Ⅱ" />
+  <meta name="keywords" content="" />
 </head>
 
 <body>
@@ -229,7 +229,8 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -300,6 +301,222 @@
   </div>
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%AE%8C%E6%88%90%E9%A2%98%E7%9B%AE">完成题目：</a>
+<ul>
+<li><a href="#%E6%B4%9B%E8%B0%B7">洛谷：</a></li>
+<li><a href="#cf">CF：</a></li>
+</ul>
+</li>
+<li><a href="#sort%E5%92%8Cpriority%E8%87%AA%E5%AE%9A%E4%B9%89%E6%AF%94%E8%BE%83%E5%99%A8%E5%88%86%E6%9E%90%E4%B8%8E%E6%AF%94%E8%BE%83">sort和priority自定义比较器分析与比较</a>
+<ul>
+<li><a href="#sort%E8%87%AA%E5%AE%9A%E4%B9%89%E6%AF%94%E8%BE%83%E5%99%A8">sort自定义比较器</a>
+<ul>
+<li><a href="#code">code:</a></li>
+</ul>
+</li>
+<li><a href="#priority_queue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%AF%94%E8%BE%83%E5%99%A8">priority_queue自定义比较器</a>
+<ul>
+<li><a href="#code-2">code:</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">注意事项</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86%E5%85%B7%E4%BD%93%E5%86%99%E6%B3%95">容斥原理具体写法</a>
+<ul>
+<li><a href="#code-3">Code:</a></li>
+</ul>
+</li>
+<li><a href="#%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95%E9%80%9F%E5%BA%A6%E6%8F%90%E5%8D%87%E6%96%B9%E6%B3%95">矩阵乘法速度提升方法</a></li>
+<li><a href="#%E5%8A%A0%E9%80%9Fcin%E4%B8%8Ecout">加速cin与cout</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+      }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
+    });
+  }
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
           
         
       </div>
@@ -387,8 +604,8 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://prayyueyu.github.io/post/luan-wang-yin-tian-meng/">
-      乱亡引·天梦
+    <a class="post-title-link" href="https://prayyueyu.github.io/post/acm-zhou-bao-ii/">
+      ACM周报Ⅱ
     </a>
   </h1>
   <div class="post-meta">
@@ -396,48 +613,23 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-10-29 23:23:59">2020-10-29</span>
+      <span class="publish-time" data-t="2024-11-20 22:11:07">2024-11-20</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://prayyueyu.github.io/tag/RfSZ2qd_v/">
-        <span>诗集</span>
-      </a>、
-      
-      
-      
-      <a href="https://prayyueyu.github.io/tag/QubC5DOzm/">
-        <span>诗词</span>
-      </a>、
-      
-      
-      
-      <a href="https://prayyueyu.github.io/tag/Wsc3aGX0ye/">
-        <span>引篇</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>1<span class="language" data-lan="minute">分钟</span></span>
+      <span>5<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>239<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>904<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/luan-wang-yin-tian-meng/" data-flag-title="乱亡引·天梦" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/acm-zhou-bao-ii/" data-flag-title="ACM周报Ⅱ" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -446,19 +638,102 @@
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <p>&quot;引：</p>
-<p>余作诗三年，得诗百篇，已然近万字，乐矣。</p>
-<p>叹如今，学务繁重，盖数十日而一诗耳！</p>
-<p>心之愁思，如涛涛积水，挥之不去，痛之心骨。</p>
-<p><strong>愿天地神佑，苍生得福</strong>。&quot;</p>
-<p>璧月沉江，乱影叠生。素清分辉，血映迷城。</p>
-<p>天梦锁。世俗万难，难于破红尘。古闻兮鸟道，街行喜客烟缥缈；<br>
-今采月中湖，冷萧清归风嘶鸣。伊人憔悴，折柳左右。凤枝隐兮，三狼其后。</p>
-<p>天梦离。鬼冥幽使，问之天梦事。众皇临兮傲天王，无惧兮，利剑征随斩百方！<br>
-何时潇暮笛罗角，悠然小楼，望尽天涯路。</p>
-<p>天梦归。一曲作罢，溪水泱泱！青山之上，未曰有之。虚神祭之，天下梦之！<br>
-却道葬谷黑云压，静兮，凭轩泣。几时兮？未能有之，自当别离。</p>
-<p>天梦天梦，吾欲悔之。天梦天梦，吾必行之！</p>
+              <h2 id="完成题目">完成题目：</h2>
+<h3 id="洛谷">洛谷：</h3>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="green"><mrow><mi>P</mi><mn>1631</mn></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{green}{P1631}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord" style="color:green;"><span class="mord mathdefault" style="margin-right:0.13889em;color:green;">P</span><span class="mord" style="color:green;">1</span><span class="mord" style="color:green;">6</span><span class="mord" style="color:green;">3</span><span class="mord" style="color:green;">1</span></span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="green"><mrow><mo>[</mo><mi>A</mi><mi>B</mi><mi>C</mi><mn>123</mn><mi>D</mi><mo>]</mo><mi>C</mi><mi>a</mi><mi>k</mi><mi>e</mi><mn>123</mn></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{green}{[ABC123D] Cake 123}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord" style="color:green;"><span class="mopen" style="color:green;">[</span><span class="mord mathdefault" style="color:green;">A</span><span class="mord mathdefault" style="margin-right:0.05017em;color:green;">B</span><span class="mord mathdefault" style="margin-right:0.07153em;color:green;">C</span><span class="mord" style="color:green;">1</span><span class="mord" style="color:green;">2</span><span class="mord" style="color:green;">3</span><span class="mord mathdefault" style="margin-right:0.02778em;color:green;">D</span><span class="mclose" style="color:green;">]</span><span class="mord mathdefault" style="margin-right:0.07153em;color:green;">C</span><span class="mord mathdefault" style="color:green;">a</span><span class="mord mathdefault" style="margin-right:0.03148em;color:green;">k</span><span class="mord mathdefault" style="color:green;">e</span><span class="mord" style="color:green;">1</span><span class="mord" style="color:green;">2</span><span class="mord" style="color:green;">3</span></span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="green"><mrow><mo>[</mo><mi>A</mi><mi>B</mi><mi>C</mi><mn>137</mn><mi>D</mi><mo>]</mo><mi>S</mi><mi>u</mi><mi>m</mi><mi>m</mi><mi>e</mi><mi>r</mi><mi>V</mi><mi>a</mi><mi>c</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{green}{[ABC137D] Summer Vacation}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord" style="color:green;"><span class="mopen" style="color:green;">[</span><span class="mord mathdefault" style="color:green;">A</span><span class="mord mathdefault" style="margin-right:0.05017em;color:green;">B</span><span class="mord mathdefault" style="margin-right:0.07153em;color:green;">C</span><span class="mord" style="color:green;">1</span><span class="mord" style="color:green;">3</span><span class="mord" style="color:green;">7</span><span class="mord mathdefault" style="margin-right:0.02778em;color:green;">D</span><span class="mclose" style="color:green;">]</span><span class="mord mathdefault" style="margin-right:0.05764em;color:green;">S</span><span class="mord mathdefault" style="color:green;">u</span><span class="mord mathdefault" style="color:green;">m</span><span class="mord mathdefault" style="color:green;">m</span><span class="mord mathdefault" style="color:green;">e</span><span class="mord mathdefault" style="margin-right:0.02778em;color:green;">r</span><span class="mord mathdefault" style="margin-right:0.22222em;color:green;">V</span><span class="mord mathdefault" style="color:green;">a</span><span class="mord mathdefault" style="color:green;">c</span><span class="mord mathdefault" style="color:green;">a</span><span class="mord mathdefault" style="color:green;">t</span><span class="mord mathdefault" style="color:green;">i</span><span class="mord mathdefault" style="color:green;">o</span><span class="mord mathdefault" style="color:green;">n</span></span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="green"><mrow><mi>P</mi><mn>4053</mn></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{green}{P4053}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord" style="color:green;"><span class="mord mathdefault" style="margin-right:0.13889em;color:green;">P</span><span class="mord" style="color:green;">4</span><span class="mord" style="color:green;">0</span><span class="mord" style="color:green;">5</span><span class="mord" style="color:green;">3</span></span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="orange"><mrow><mi>P</mi><mn>8754</mn></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{orange}{P8754}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord" style="color:orange;"><span class="mord mathdefault" style="margin-right:0.13889em;color:orange;">P</span><span class="mord" style="color:orange;">8</span><span class="mord" style="color:orange;">7</span><span class="mord" style="color:orange;">5</span><span class="mord" style="color:orange;">4</span></span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="blue"><mrow><mi>P</mi><mn>1139</mn></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{blue}{P1139}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord" style="color:blue;"><span class="mord mathdefault" style="margin-right:0.13889em;color:blue;">P</span><span class="mord" style="color:blue;">1</span><span class="mord" style="color:blue;">1</span><span class="mord" style="color:blue;">3</span><span class="mord" style="color:blue;">9</span></span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="#FFD700"><mrow><mi>P</mi><mn>1754</mn></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{#FFD700}{P1754}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord" style="color:#FFD700;"><span class="mord mathdefault" style="margin-right:0.13889em;color:#FFD700;">P</span><span class="mord" style="color:#FFD700;">1</span><span class="mord" style="color:#FFD700;">7</span><span class="mord" style="color:#FFD700;">5</span><span class="mord" style="color:#FFD700;">4</span></span></span></span></span></p>
+<h3 id="cf">CF：</h3>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>R</mi><mi>o</mi><mi>u</mi><mi>n</mi><mi>d</mi><mn>988</mn><mo>(</mo><mi>d</mi><mi>i</mi><mi>v</mi><mi mathvariant="normal">.</mi><mn>3</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">Round 988 (div.3)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mord">9</span><span class="mord">8</span><span class="mord">8</span><span class="mopen">(</span><span class="mord mathdefault">d</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord">.</span><span class="mord">3</span><span class="mclose">)</span></span></span></span>：赛时<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>o</mi><mi>l</mi><mi>v</mi><mi>e</mi><mi>d</mi><mn>4</mn></mrow><annotation encoding="application/x-tex">solved 4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">e</span><span class="mord mathdefault">d</span><span class="mord">4</span></span></span></span>，赛后<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>o</mi><mi>l</mi><mi>v</mi><mi>e</mi><mi>d</mi><mn>6</mn></mrow><annotation encoding="application/x-tex">solved 6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">e</span><span class="mord mathdefault">d</span><span class="mord">6</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mi>a</mi><mi>n</mi><mi>k</mi><mn>3856</mn></mrow><annotation encoding="application/x-tex">rank 3856</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">a</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord">3</span><span class="mord">8</span><span class="mord">5</span><span class="mord">6</span></span></span></span></p>
+<h2 id="sort和priority自定义比较器分析与比较">sort和priority自定义比较器分析与比较</h2>
+<h3 id="sort自定义比较器">sort自定义比较器</h3>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>o</mi><mi>r</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">sort</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">t</span></span></span></span>有三个参数，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>o</mi><mi>r</mi><mi>t</mi><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo separator="true">,</mo><mi>c</mi><mi>m</mi><mi>p</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">sort(x,y,cmp)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">m</span><span class="mord mathdefault">p</span><span class="mclose">)</span></span></span></span><br>
+前两个参数为需要排序的数组或者容器的初始指针位置，后一个为尾指针位置<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">+</span><span class="mord">1</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi><mi>m</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">cmp</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">m</span><span class="mord mathdefault">p</span></span></span></span>为自定义比较器，需要额外添加一个函数</p>
+<h4 id="code">code:</h4>
+<pre><code class="language-c++">struct node{
+    int a,b;
+};
+bool cmp(node x,node y){return x.a&gt;y.a;}
+</code></pre>
+<p>通过以上<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi><mi>m</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">cmp</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">m</span><span class="mord mathdefault">p</span></span></span></span>函数可以把<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>o</mi><mi>r</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">sort</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">t</span></span></span></span>排序方式变为按照<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mi>o</mi><mi>d</mi><mi>e</mi><mi mathvariant="normal">.</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">node.a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">n</span><span class="mord mathdefault">o</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mord">.</span><span class="mord mathdefault">a</span></span></span></span>从大到小排序</p>
+<h3 id="priority_queue自定义比较器">priority_queue自定义比较器</h3>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mi>r</mi><mi>i</mi><mi>o</mi><mi>r</mi><mi>i</mi><mi>t</mi><msub><mi>y</mi><mi>q</mi></msub><mi>u</mi><mi>e</mi><mi>u</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">priority_queue</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9456279999999999em;vertical-align:-0.286108em;"></span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">i</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">q</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span></span></span></span>也有三个参数，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mi>r</mi><mi>i</mi><mi>o</mi><mi>r</mi><mi>i</mi><mi>t</mi><msub><mi>y</mi><mi>q</mi></msub><mi>u</mi><mi>e</mi><mi>u</mi><mi>e</mi><mo>(</mo><mi>t</mi><mi>y</mi><mi>p</mi><mi>e</mi><mo separator="true">,</mo><mi>c</mi><mi>o</mi><mi>n</mi><mi>t</mi><mi>a</mi><mi>i</mi><mi>n</mi><mi>e</mi><mi>r</mi><mo separator="true">,</mo><mi>c</mi><mi>m</mi><mi>p</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">priority_queue(type,container,cmp)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">i</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">q</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord mathdefault">p</span><span class="mord mathdefault">e</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">m</span><span class="mord mathdefault">p</span><span class="mclose">)</span></span></span></span><br>
+第一个参数为储存的数据类型，可以为结构体<br>
+第二个参数为容器类型，一般是vecctor<br>
+第三个是比较器，自带的有<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>l</mi><mi>e</mi><mi>s</mi><mi>s</mi><mo>&lt;</mo><mi>i</mi><mi>n</mi><mi>t</mi><mo>&gt;</mo></mrow><annotation encoding="application/x-tex">less&lt;int&gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69862em;vertical-align:-0.0391em;"></span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span></span></span></span>和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>g</mi><mi>r</mi><mi>e</mi><mi>a</mi><mi>t</mi><mi>e</mi><mi>r</mi><mo>&lt;</mo><mi>i</mi><mi>n</mi><mi>t</mi><mo>&gt;</mo></mrow><annotation encoding="application/x-tex">greater&lt;int&gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69862em;vertical-align:-0.0391em;"></span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span></span></span></span><br>
+前一个是大根堆比较器，后一个是小根堆比较器，默认是大根堆</p>
+<h4 id="code-2">code:</h4>
+<pre><code class="language-c++">struct node{
+  int a,b;  
+};
+struct cmp{
+    bool operator()(node x,node y){
+        return x.a&gt;y.a;
+    }
+};
+priority_queue(node,vector&lt;node&gt;,cmp)
+</code></pre>
+<p>以上函数即是按照<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mi>o</mi><mi>d</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">node</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">n</span><span class="mord mathdefault">o</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span></span></span></span>中的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span>从小到大排序，为小根堆<br>
+或者在结构体内重载运算符：</p>
+<pre><code class="language-c++">struct node{
+    int a,b;
+    bool operator &lt;(const node &amp;R) const{//把运算符&lt;换一种运算方式
+        return a &gt; R.a;//比较当前R中的a和其他所有a
+    }
+};//因为原priority中是按照&lt;来排序所以要把&lt;换一种方式
+</code></pre>
+<h3 id="注意事项">注意事项</h3>
+<p><strong>注意，sort自定义比较器<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&gt;</mo></mrow><annotation encoding="application/x-tex">&gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span></span></span></span>代表从大到小排序</strong><br>
+<strong>而priority里<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&gt;</mo></mrow><annotation encoding="application/x-tex">&gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span></span></span></span>代表从小到大排序</strong>，<strong>priority的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&gt;</mo></mrow><annotation encoding="application/x-tex">&gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span></span></span></span>代表若大于则返回真，需要交换对顶和堆尾</strong></p>
+<h2 id="容斥原理具体写法">容斥原理具体写法</h2>
+<p>假设需要求以下式子：<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>[</mo><msub><mi>p</mi><mn>1</mn></msub><mo>]</mo><mo>+</mo><mi>f</mi><mo>[</mo><msub><mi>p</mi><mn>2</mn></msub><mo>]</mo><mo>+</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>+</mo><mi>f</mi><mo>[</mo><msub><mi>p</mi><mi>n</mi></msub><mo>]</mo><mo>−</mo><mi>f</mi><mo>[</mo><msub><mi>p</mi><mn>1</mn></msub><mo>∗</mo><msub><mi>p</mi><mn>2</mn></msub><mo>]</mo><mo>−</mo><mi>f</mi><mo>[</mo><msub><mi>p</mi><mn>1</mn></msub><mo>∗</mo><msub><mi>p</mi><mn>3</mn></msub><mo>]</mo><mo>−</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>+</mo><mi>f</mi><mo>[</mo><msub><mi>p</mi><mn>1</mn></msub><mo>∗</mo><msub><mi>p</mi><mn>2</mn></msub><mo>∗</mo><msub><mi>p</mi><mn>3</mn></msub><mo>]</mo><mo>+</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">f[p_1]+f[p_2]+...+f[p_n]-f[p_1*p_2]-f[p_1*p_3]-...+f[p_1*p_2*p_3]+...</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">[</span><span class="mord"><span class="mord mathdefault">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">[</span><span class="mord"><span class="mord mathdefault">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">[</span><span class="mord"><span class="mord mathdefault">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">[</span><span class="mord"><span class="mord mathdefault">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">[</span><span class="mord"><span class="mord mathdefault">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">[</span><span class="mord"><span class="mord mathdefault">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.6597200000000001em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.10556em;vertical-align:0em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span></span></span></span><br>
+假设一共有<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>p</mi><mn>1</mn></msub><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><msub><mi>p</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">p_1...p_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mord"><span class="mord mathdefault">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>个数</p>
+<h3 id="code-3">Code:</h3>
+<pre><code class="language-c++">for(int i=1;i&lt;(1&lt;&lt;n);i++){
+    int t=1,s=0;
+    for(int j=1;j&lt;=n;j++){
+        if((i&gt;&gt;(j-1))&amp;1){//需要取用当前位
+        	if(t*p[j]&gt;n){t=-1;break;}//超过范围作废
+			t*=p[j];
+            s++;//计数
+        }
+	}
+    if(t!=-1){
+        if(s&amp;1)ans+=f[t];//奇数个
+        else ans-=f[t];//偶数个
+    }
+}
+cout&lt;&lt;ans;
+</code></pre>
+<h2 id="矩阵乘法速度提升方法">矩阵乘法速度提升方法</h2>
+<p>RT，众所周知矩阵乘法时间复杂度是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>∗</mo><mi>m</mi><mo>∗</mo><mi>k</mi><mo>)</mo><mi mathvariant="normal">，</mi><mi mathvariant="normal">但</mi><mi mathvariant="normal">常</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">多</mi><mi mathvariant="normal">少</mi><mi mathvariant="normal">就</mi><mi mathvariant="normal">不</mi><mi mathvariant="normal">知</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">了</mi></mrow><annotation encoding="application/x-tex">O(n*m*k)，但常数是多少就不知道了</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.46528em;vertical-align:0em;"></span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mclose">)</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">但</span><span class="mord cjk_fallback">常</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">多</span><span class="mord cjk_fallback">少</span><span class="mord cjk_fallback">就</span><span class="mord cjk_fallback">不</span><span class="mord cjk_fallback">知</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">了</span></span></span></span><br>
+代码如下：</p>
+<pre><code class="language-c++">for (int i = 1; i &lt;= n; i++)
+    for (int j = 1; j &lt;= m; j++)
+        for (int k = 1; k &lt;= R; k++)
+            ans[i][j] += a[i][k] * b[k][i];
+</code></pre>
+<p>但是调换一下顺序将会提升2~5倍速度<br>
+代码如下：</p>
+<pre><code class="language-c++">for (int i = 1; i &lt;= n; i++)
+    for (int k = 1; k &lt;= R; k++) {
+        int x = a[i][k];//为了避免重复调用可以先储存，可以加快速度
+        for (int j = 1; j &lt;= m; j++)
+            ans[i][j] += x * b[k][i];
+    }
+</code></pre>
+<p>具体原因和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi><mi>p</mi><mi>u</mi></mrow><annotation encoding="application/x-tex">cpu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">p</span><span class="mord mathdefault">u</span></span></span></span>运行方式有关，我没看懂。有兴趣自己搜</p>
+<h2 id="加速cin与cout">加速cin与cout</h2>
+<p>输入以下代码即可：</p>
+<pre><code class="language-c++">std::ios::sync_with_stdio(false);
+cin.tie(0),cout.tie(0);
+</code></pre>
 
             </div>
             
@@ -471,7 +746,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://prayyueyu.github.io/post/luan-wang-yin-tian-meng/" title="乱亡引·天梦">https://prayyueyu.github.io/post/luan-wang-yin-tian-meng/</a>
+      <a href="https://prayyueyu.github.io/post/acm-zhou-bao-ii/" title="ACM周报Ⅱ">https://prayyueyu.github.io/post/acm-zhou-bao-ii/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -480,25 +755,15 @@
   </ul>
   <div class="tags">
     
-      <a href="https://prayyueyu.github.io/tag/RfSZ2qd_v/"># 诗集</a>
-    
-      <a href="https://prayyueyu.github.io/tag/QubC5DOzm/"># 诗词</a>
-    
-      <a href="https://prayyueyu.github.io/tag/Wsc3aGX0ye/"># 引篇</a>
-    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="关于博客" href="https://prayyueyu.github.io/post/about/">关于博客</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="关于博客" href="https://prayyueyu.github.io/post/about/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="赤亡引·天命" href="https://prayyueyu.github.io/post/chi-wang-yin-tian-ming/">赤亡引·天命</a>
-        <a class="nav-mobile-next" title="赤亡引·天命" href="https://prayyueyu.github.io/post/chi-wang-yin-tian-ming/">下一篇</a>
+        <a class="nav-pc-next" title="ACM周报（11.4-11.10）" href="https://prayyueyu.github.io/post/acm-zhou-bao-114-1110/">ACM周报（11.4-11.10）</a>
+        <a class="nav-mobile-next" title="ACM周报（11.4-11.10）" href="https://prayyueyu.github.io/post/acm-zhou-bao-114-1110/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
